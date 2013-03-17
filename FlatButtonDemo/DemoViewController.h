@@ -6,7 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSFlatButton.h"
 
 @interface DemoViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet JSFlatButton *button1;
+@property (weak, nonatomic) IBOutlet JSFlatButton *button2;
+@property (weak, nonatomic) IBOutlet JSFlatButton *button3;
+@property (weak, nonatomic) IBOutlet JSFlatButton *button4;
+@property (weak, nonatomic) IBOutlet JSFlatButton *button5;
 
 @end
