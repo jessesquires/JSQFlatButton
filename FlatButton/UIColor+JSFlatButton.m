@@ -32,14 +32,14 @@
 {
     CGFloat h,s,b,a;
     [self getHue:&h saturation:&s brightness:&b alpha:&a];
-    return [UIColor colorWithHue:h saturation:s brightness:b * 0.85 alpha:a];
+    return [UIColor colorWithHue:h saturation:s brightness:b * 0.85f alpha:a];
 }
 
 - (UIColor *)lightenedColor
 {
     CGFloat h,s,b,a;
     [self getHue:&h saturation:&s brightness:&b alpha:&a];
-    return [UIColor colorWithHue:h saturation:s brightness:b * 1.15 alpha:a];
+    return [UIColor colorWithHue:h saturation:s brightness:b * 1.15f alpha:a];
 }
 
 @end

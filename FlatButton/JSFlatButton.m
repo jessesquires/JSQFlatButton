@@ -135,13 +135,13 @@
 - (void)setFlatImage:(UIImage *)image
 {
     image = [image imageMaskWithColor:self.buttonForegroundColor
-                         shadowOffset:CGPointMake(0, 0)];
+                         shadowOffset:CGPointMake(0.0f, 0.0f)];
   
     [self setImage:image forState:UIControlStateNormal];
     
     if(self.shouldHighlightImage) {
         image = [image imageMaskWithColor:self.foregroundHighlightedColor
-                             shadowOffset:CGPointMake(0, 0)];
+                             shadowOffset:CGPointMake(0.0f, 0.0f)];
     }
     
     [self setImage:image forState:UIControlStateHighlighted];
