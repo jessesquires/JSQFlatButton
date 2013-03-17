@@ -13,9 +13,7 @@ Following recent design trends toward flat design. Get hip. Embrace minimalism.
 * Make flat buttons with text and/or images
 
 ### Icons
-Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). 
-
-Go show him some love.
+Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). Go show him some love.
 
 **READ:** `App-Bits Icons/00_License.txt` and `App-Bits Icons/00_readme.pdf` for details on icon usage
 
@@ -25,19 +23,20 @@ Go show him some love.
 * Initialize buttons
 	* To create buttons programmatically:
 		* Call `initWithFrame: backgroundColor: foregroundColor:`
-		* Or, use the `UIButton` methods `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:` [ref][ref1]
+		* Or, use the [UIButton][ref1] methods `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:`
 	* To create buttons with Storyboards:
 		* Drag a `UIButton` to your view
 		* Set its class to `JSFlatButton` and button type to `Custom` in Interface Builder
 		* Set your `IBOutlet` and `IBAction` accordingly
 * Set button properties `buttonBackgroundColor` and `buttonForegroundColor`
-* **Colors must be set in HSB color space**
-	* Use the `UIColor` method `colorWithHue: saturation: brightness: alpha:` [ref][ref2]
+* **Colors must be set in HSB or RGB color space**
+	* Use the [UIColor][ref2] methods: `colorWithHue: saturation: brightness: alpha:` or `colorWithRed: green: blue: alpha:`
+	* iOS built-in colors **will not** work (e.g., `[UIColor whiteColor]`, `[UIColor darkGrayColor]`, etc.)
 * Call `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
 * You may set your button title font and other attributes as you normally would with `UIButton`
 * *Special Options*
-	* Set `shouldHighlightImage` to `YES` to optionally highlight the button image when pressed (default value is NO)
-	* Set `shouldHighlightText` to `YES`to optionally highlight the button title text when pressed (default value is NO)
+	* Set `shouldHighlightImage` to `YES` to optionally highlight the button image when pressed (default value is `NO`)
+	* Set `shouldHighlightText` to `YES`to optionally highlight the button title text when pressed (default value is `NO`)
 	* To make a flat button with an *image-only* and **no** background color:
 		* Set `buttonBackgroundColor` to `nil`
 		* Set `shouldHighlightImage` to `YES`
