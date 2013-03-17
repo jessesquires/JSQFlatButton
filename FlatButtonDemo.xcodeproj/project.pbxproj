@@ -12,13 +12,15 @@
 		8810080716F642E900B9AA57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8810080616F642E900B9AA57 /* CoreGraphics.framework */; };
 		8810080D16F642E900B9AA57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8810080B16F642E900B9AA57 /* InfoPlist.strings */; };
 		8810080F16F642E900B9AA57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810080E16F642E900B9AA57 /* main.m */; };
-		8810081316F642E900B9AA57 /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810081216F642E900B9AA57 /* JSAppDelegate.m */; };
+		8810081316F642E900B9AA57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810081216F642E900B9AA57 /* AppDelegate.m */; };
 		8810081516F642E900B9AA57 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8810081416F642E900B9AA57 /* Default.png */; };
 		8810081716F642E900B9AA57 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8810081616F642E900B9AA57 /* Default@2x.png */; };
 		8810081916F642E900B9AA57 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8810081816F642E900B9AA57 /* Default-568h@2x.png */; };
-		8810081C16F642E900B9AA57 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8810081A16F642E900B9AA57 /* MainStoryboard_iPhone.storyboard */; };
-		8810081F16F642E900B9AA57 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8810081D16F642E900B9AA57 /* MainStoryboard_iPad.storyboard */; };
-		8810082216F642E900B9AA57 /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810082116F642E900B9AA57 /* JSViewController.m */; };
+		8810081C16F642E900B9AA57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8810081A16F642E900B9AA57 /* MainStoryboard.storyboard */; };
+		8810082216F642E900B9AA57 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810082116F642E900B9AA57 /* DemoViewController.m */; };
+		8810083416F646C100B9AA57 /* JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810083116F646C100B9AA57 /* JSFlatButton.m */; };
+		8810083516F646C100B9AA57 /* UIColor+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810083316F646C100B9AA57 /* UIColor+JSFlatButton.m */; };
+		8810083816F6480300B9AA57 /* UIImage+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810083716F6480300B9AA57 /* UIImage+JSFlatButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,15 +32,20 @@
 		8810080C16F642E900B9AA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8810080E16F642E900B9AA57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8810081016F642E900B9AA57 /* FlatButtonDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlatButtonDemo-Prefix.pch"; sourceTree = "<group>"; };
-		8810081116F642E900B9AA57 /* JSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAppDelegate.h; sourceTree = "<group>"; };
-		8810081216F642E900B9AA57 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
+		8810081116F642E900B9AA57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8810081216F642E900B9AA57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8810081416F642E900B9AA57 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8810081616F642E900B9AA57 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8810081816F642E900B9AA57 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8810081B16F642E900B9AA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		8810081E16F642E900B9AA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		8810082016F642E900B9AA57 /* JSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
-		8810082116F642E900B9AA57 /* JSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		8810081B16F642E900B9AA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8810082016F642E900B9AA57 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		8810082116F642E900B9AA57 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		8810083016F646C100B9AA57 /* JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatButton.h; sourceTree = "<group>"; };
+		8810083116F646C100B9AA57 /* JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatButton.m; sourceTree = "<group>"; };
+		8810083216F646C100B9AA57 /* UIColor+JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSFlatButton.h"; sourceTree = "<group>"; };
+		8810083316F646C100B9AA57 /* UIColor+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSFlatButton.m"; sourceTree = "<group>"; };
+		8810083616F6480300B9AA57 /* UIImage+JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSFlatButton.h"; sourceTree = "<group>"; };
+		8810083716F6480300B9AA57 /* UIImage+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSFlatButton.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +92,12 @@
 		8810080816F642E900B9AA57 /* FlatButtonDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8810081116F642E900B9AA57 /* JSAppDelegate.h */,
-				8810081216F642E900B9AA57 /* JSAppDelegate.m */,
-				8810081A16F642E900B9AA57 /* MainStoryboard_iPhone.storyboard */,
-				8810081D16F642E900B9AA57 /* MainStoryboard_iPad.storyboard */,
-				8810082016F642E900B9AA57 /* JSViewController.h */,
-				8810082116F642E900B9AA57 /* JSViewController.m */,
+				8810081116F642E900B9AA57 /* AppDelegate.h */,
+				8810081216F642E900B9AA57 /* AppDelegate.m */,
+				8810081A16F642E900B9AA57 /* MainStoryboard.storyboard */,
+				8810082016F642E900B9AA57 /* DemoViewController.h */,
+				8810082116F642E900B9AA57 /* DemoViewController.m */,
+				8810082F16F646C100B9AA57 /* FlatButton */,
 				8810080916F642E900B9AA57 /* Supporting Files */,
 			);
 			path = FlatButtonDemo;
@@ -109,6 +116,19 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		8810082F16F646C100B9AA57 /* FlatButton */ = {
+			isa = PBXGroup;
+			children = (
+				8810083016F646C100B9AA57 /* JSFlatButton.h */,
+				8810083116F646C100B9AA57 /* JSFlatButton.m */,
+				8810083216F646C100B9AA57 /* UIColor+JSFlatButton.h */,
+				8810083316F646C100B9AA57 /* UIColor+JSFlatButton.m */,
+				8810083616F6480300B9AA57 /* UIImage+JSFlatButton.h */,
+				8810083716F6480300B9AA57 /* UIImage+JSFlatButton.m */,
+			);
+			path = FlatButton;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -166,8 +186,7 @@
 				8810081516F642E900B9AA57 /* Default.png in Resources */,
 				8810081716F642E900B9AA57 /* Default@2x.png in Resources */,
 				8810081916F642E900B9AA57 /* Default-568h@2x.png in Resources */,
-				8810081C16F642E900B9AA57 /* MainStoryboard_iPhone.storyboard in Resources */,
-				8810081F16F642E900B9AA57 /* MainStoryboard_iPad.storyboard in Resources */,
+				8810081C16F642E900B9AA57 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8810080F16F642E900B9AA57 /* main.m in Sources */,
-				8810081316F642E900B9AA57 /* JSAppDelegate.m in Sources */,
-				8810082216F642E900B9AA57 /* JSViewController.m in Sources */,
+				8810081316F642E900B9AA57 /* AppDelegate.m in Sources */,
+				8810082216F642E900B9AA57 /* DemoViewController.m in Sources */,
+				8810083416F646C100B9AA57 /* JSFlatButton.m in Sources */,
+				8810083516F646C100B9AA57 /* UIColor+JSFlatButton.m in Sources */,
+				8810083816F6480300B9AA57 /* UIImage+JSFlatButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,20 +217,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8810081A16F642E900B9AA57 /* MainStoryboard_iPhone.storyboard */ = {
+		8810081A16F642E900B9AA57 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8810081B16F642E900B9AA57 /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		8810081D16F642E900B9AA57 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8810081E16F642E900B9AA57 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -278,6 +292,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatButtonDemo/FlatButtonDemo-Prefix.pch";
 				INFOPLIST_FILE = "FlatButtonDemo/FlatButtonDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,6 +304,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatButtonDemo/FlatButtonDemo-Prefix.pch";
 				INFOPLIST_FILE = "FlatButtonDemo/FlatButtonDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -313,6 +329,7 @@
 				8810082716F642E900B9AA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
