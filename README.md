@@ -1,42 +1,45 @@
 # FlatButton
 
-A simple, light-weight flat design UI button for iOS.
+A simple, light-weight, flat design UI button for iOS.
 
 ![FlatButton Screenshot 1][1]
 
 ## About
 
-Following the recent trend in iOS toward flat design. Get hip. Embrace minimalism.
+Following recent trends toward flat design. Get hip. Embrace minimalism.
 
 * Simple, easy-to-use sublcass of `UIButton`
 * iOS 5.0+, ARC, Universal, Retina, Storyboards
 * Make flat buttons with text and/or images
 
 Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). Go show him some love.
-**See `App-Bits Icons/00_License.txt` and `App-Bits Icons/00_readme.pdf` for details**
+**See `App-Bits Icons/00_License.txt` and `App-Bits Icons/00_readme.pdf` for details on icon usage**
 
 ## Installation
 
-* Drag the `FlatButton/` folder to your project.
+* Drag the `FlatButton/` folder to your project
 * Initialize buttons
 	* To create buttons programmatically:
-		* Use the [`UIButton`][2] API `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:`
-		* Or, `initWithFrame: backgroundColor: foregroundColor:`
+		* Call `initWithFrame: backgroundColor: foregroundColor:`
+		* Or, use the [`UIButton`][2] API `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:`
 	* To create buttons with Storyboards:
 		* Drag a `UIButton` to your view
 		* Set its class to `JSFlatButton` and button type to `Custom` in Interface Builder
-		* Set your `IBOutlet` and `IBAction` appropriately
-* Set `UIColor` properties `buttonBackgroundColor` and `buttonForegroundColor`
+		* Set your `IBOutlet` and `IBAction` accordingly
+* Set button properties `buttonBackgroundColor` and `buttonForegroundColor`
 * **Colors must be set in HSB color space**
 	* Use [`UIColor`][3] API `colorWithHue: saturation: brightness: alpha:`
-* Use `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
+* Call `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
 * You may set your button title font and other attributes as you normally would with `UIButton`
 * *Special Options*
-	* To use make a flat button with an *image-only* and **no** background color:
+	* Set `shouldHighlightImage` to `YES` to optionally highlight the button image when pressed
+	* Set `shouldHighlightText` to `YES`to optionally highlight the button title text when pressed
+	* To make a flat button with an *image-only* and **no** background color:
 		* Set `buttonBackgroundColor` to `nil`
 		* Set `shouldHighlightImage` to `YES`
 		* Set your `buttonForegroundColor` to whatever you want
 		* Call `setFlatTitle:` with `nil`
+	* Similarly, you can make a flat button with *text-only* and **no** background color
 * See included demo project: `FlatButtonDemo.xcodeproj` 
 
 ## License
