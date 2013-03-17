@@ -6,7 +6,7 @@ A simple, light-weight, flat design UI button for iOS.
 
 ## About
 
-Following recent trends toward flat design. Get hip. Embrace minimalism.
+Following recent design trends toward flat design. Get hip. Embrace minimalism.
 
 * Simple, easy-to-use sublcass of `UIButton`
 * iOS 5.0+, ARC, Universal, Retina, Storyboards
@@ -32,8 +32,8 @@ Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP
 * Call `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
 * You may set your button title font and other attributes as you normally would with `UIButton`
 * *Special Options*
-	* Set `shouldHighlightImage` to `YES` to optionally highlight the button image when pressed
-	* Set `shouldHighlightText` to `YES`to optionally highlight the button title text when pressed
+	* Set `shouldHighlightImage` to `YES` to optionally highlight the button image when pressed (default value is NO)
+	* Set `shouldHighlightText` to `YES`to optionally highlight the button title text when pressed (default value is NO)
 	* To make a flat button with an *image-only* and **no** background color:
 		* Set `buttonBackgroundColor` to `nil`
 		* Set `shouldHighlightImage` to `YES`
