@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet JSFlatButton *button3;
 @property (weak, nonatomic) IBOutlet JSFlatButton *button4;
 @property (weak, nonatomic) IBOutlet JSFlatButton *button5;
+@property (weak, nonatomic) IBOutlet JSFlatButton *button6;
 
 @end

@@ -31,6 +31,7 @@
 @property (strong, nonatomic) UIColor *backgroundHighlightedColor;
 @property (strong, nonatomic) UIColor *foregroundHighlightedColor;
 
+- (void)setup;
 - (void)refreshTitleAndImage;
 
 @end
@@ -43,6 +44,8 @@
 @synthesize backgroundHighlightedColor;
 @synthesize buttonForegroundColor;
 @synthesize foregroundHighlightedColor;
+@synthesize shouldHighlightText;
+@synthesize shouldHighlightImage;
 
 #pragma mark - Initialization
 - (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)back foregroundColor:(UIColor *)fore
@@ -51,7 +54,7 @@
     if(self) {
         self.buttonBackgroundColor = back;
         self.buttonForegroundColor = fore;
-        self.shouldHighlightImage = NO;
+        [self setup];
     }
     return self;
 }
@@ -60,7 +63,7 @@
 {
     self = [super initWithFrame:frame];
     if(self) {
-        self.shouldHighlightImage = NO;
+        [self setup];
     }
     return self;
 }
@@ -69,7 +72,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if(self) {
-        self.shouldHighlightImage = NO;
+        [self setup];
     }
     return self;
 }
@@ -87,6 +90,18 @@
 {
     buttonForegroundColor = color;
     foregroundHighlightedColor = [color darkenedColor];
+    [self refreshTitleAndImage];
+}
+
+- (void)setShouldHighlightText:(BOOL)highlight
+{
+    shouldHighlightText = highlight;
+    [self refreshTitleAndImage];
+}
+
+- (void)setShouldHighlightImage:(BOOL)highlight
+{
+    shouldHighlightImage = highlight;
     [self refreshTitleAndImage];
 }
 
@@ -112,7 +127,9 @@
     [self setTitle:title forState:UIControlStateHighlighted];
     
     [self setTitleColor:self.buttonForegroundColor forState:UIControlStateNormal];
-    [self setTitleColor:self.buttonForegroundColor forState:UIControlStateHighlighted];
+    
+    [self setTitleColor:(self.shouldHighlightText ? self.foregroundHighlightedColor : self.buttonForegroundColor)
+               forState:UIControlStateHighlighted];
 }
 
 - (void)setFlatImage:(UIImage *)image
@@ -131,6 +148,12 @@
 }
 
 #pragma mark - Utilities
+- (void)setup
+{
+    self.shouldHighlightText = NO;
+    self.shouldHighlightImage = NO;
+}
+
 - (void)refreshTitleAndImage
 {
     [self setFlatTitle:self.titleLabel.text];

@@ -32,6 +32,7 @@
 
 @property (strong, nonatomic) UIColor *buttonBackgroundColor;
 @property (strong, nonatomic) UIColor *buttonForegroundColor;
+@property (assign, nonatomic) BOOL shouldHighlightText;
 @property (assign, nonatomic) BOOL shouldHighlightImage;
 
 #pragma mark - Initialization

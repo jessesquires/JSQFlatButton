@@ -50,6 +50,13 @@
     self.button5.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
     [self.button5 setFlatTitle:nil];
     [self.button5 setFlatImage:[UIImage imageNamed:@"plus"]];
+    
+    self.button6.buttonBackgroundColor = nil;
+    self.button6.shouldHighlightText = YES;
+    self.button6.buttonForegroundColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:0.60f alpha:1.0f];
+    [self.button6 setFlatTitle:@"Text Only Button"];
+    self.button6.titleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
+    [self.button6 setFlatImage:nil];
 }
 
 - (void)didReceiveMemoryWarning
