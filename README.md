@@ -2,7 +2,7 @@
 
 A simple, light-weight, flat design UI button for iOS.
 
-![FlatButton Screenshot 1][img1] &nbsp;&nbsp;&nbsp;&nbsp; [FlatButton Screenshot 2][img2]
+![FlatButton Screenshot 1][img1] &nbsp;&nbsp;&nbsp;&nbsp; ![FlatButton Screenshot 2][img2]
 
 ## About
 
