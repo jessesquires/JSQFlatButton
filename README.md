@@ -12,8 +12,12 @@ Following recent design trends toward flat design. Get hip. Embrace minimalism.
 * iOS 5.0+, ARC, Universal, Retina, Storyboards
 * Make flat buttons with text and/or images
 
-Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). Go show him some love.
-**See `App-Bits Icons/00_License.txt` and `App-Bits Icons/00_readme.pdf` for details on icon usage**
+### Icons
+Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). 
+
+Go show him some love.
+
+**READ:** `App-Bits Icons/00_License.txt` and `App-Bits Icons/00_readme.pdf` for details on icon usage
 
 ## Installation
 
@@ -21,14 +25,14 @@ Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP
 * Initialize buttons
 	* To create buttons programmatically:
 		* Call `initWithFrame: backgroundColor: foregroundColor:`
-		* Or, use the [`UIButton`][2] API `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:`
+		* Or, use the `UIButton` methods `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:` [ref][2]
 	* To create buttons with Storyboards:
 		* Drag a `UIButton` to your view
 		* Set its class to `JSFlatButton` and button type to `Custom` in Interface Builder
 		* Set your `IBOutlet` and `IBAction` accordingly
 * Set button properties `buttonBackgroundColor` and `buttonForegroundColor`
 * **Colors must be set in HSB color space**
-	* Use [`UIColor`][3] API `colorWithHue: saturation: brightness: alpha:`
+	* Use the `UIColor` method `colorWithHue: saturation: brightness: alpha:` [ref][3]
 * Call `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
 * You may set your button title font and other attributes as you normally would with `UIButton`
 * *Special Options*
