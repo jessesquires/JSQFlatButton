@@ -2,7 +2,7 @@
 
 A simple, light-weight, flat design UI button for iOS.
 
-![FlatButton Screenshot 1][1]
+![FlatButton Screenshot 1][img1] &nbsp;&nbsp;&nbsp;&nbsp; [FlatButton Screenshot 2][img2]
 
 ## About
 
@@ -25,14 +25,14 @@ Go show him some love.
 * Initialize buttons
 	* To create buttons programmatically:
 		* Call `initWithFrame: backgroundColor: foregroundColor:`
-		* Or, use the `UIButton` methods `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:` [ref][2]
+		* Or, use the `UIButton` methods `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:` [ref][ref1]
 	* To create buttons with Storyboards:
 		* Drag a `UIButton` to your view
 		* Set its class to `JSFlatButton` and button type to `Custom` in Interface Builder
 		* Set your `IBOutlet` and `IBAction` accordingly
 * Set button properties `buttonBackgroundColor` and `buttonForegroundColor`
 * **Colors must be set in HSB color space**
-	* Use the `UIColor` method `colorWithHue: saturation: brightness: alpha:` [ref][3]
+	* Use the `UIColor` method `colorWithHue: saturation: brightness: alpha:` [ref][ref2]
 * Call `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
 * You may set your button title font and other attributes as you normally would with `UIButton`
 * *Special Options*
@@ -61,7 +61,8 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[1]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4.png
+[img1]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4-1.png
+[img2]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4-2.png
 
-[2]:http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIButton_Class/UIButton/UIButton.html
-[3]:http://developer.apple.com/library/ios/#documentation/uikit/reference/UIColor_Class/Reference/Reference.html
+[ref1]:http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIButton_Class/UIButton/UIButton.html
+[ref2]:http://developer.apple.com/library/ios/#documentation/uikit/reference/UIColor_Class/Reference/Reference.html
