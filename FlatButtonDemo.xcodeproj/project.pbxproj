@@ -18,9 +18,6 @@
 		8810081916F642E900B9AA57 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8810081816F642E900B9AA57 /* Default-568h@2x.png */; };
 		8810081C16F642E900B9AA57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8810081A16F642E900B9AA57 /* MainStoryboard.storyboard */; };
 		8810082216F642E900B9AA57 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810082116F642E900B9AA57 /* DemoViewController.m */; };
-		8810083416F646C100B9AA57 /* JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810083116F646C100B9AA57 /* JSFlatButton.m */; };
-		8810083516F646C100B9AA57 /* UIColor+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810083316F646C100B9AA57 /* UIColor+JSFlatButton.m */; };
-		8810083816F6480300B9AA57 /* UIImage+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810083716F6480300B9AA57 /* UIImage+JSFlatButton.m */; };
 		88100B0616F661F100B9AA57 /* 00_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88100A7616F661F100B9AA57 /* 00_License.txt */; };
 		88100B0716F661F100B9AA57 /* 00_readme.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88100A7716F661F100B9AA57 /* 00_readme.pdf */; };
 		88100B0816F661F100B9AA57 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88100A7916F661F100B9AA57 /* alarm@2x.png */; };
@@ -163,6 +160,9 @@
 		88100B9116F661F100B9AA57 /* trolley.png in Resources */ = {isa = PBXBuildFile; fileRef = 88100B0316F661F100B9AA57 /* trolley.png */; };
 		88100B9216F661F100B9AA57 /* truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 88100B0416F661F100B9AA57 /* truck.png */; };
 		88100B9316F661F100B9AA57 /* waste_basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 88100B0516F661F100B9AA57 /* waste_basket.png */; };
+		88301F6516F77C9C0037524D /* JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88301F6016F77C9C0037524D /* JSFlatButton.m */; };
+		88301F6616F77C9C0037524D /* UIColor+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88301F6216F77C9C0037524D /* UIColor+JSFlatButton.m */; };
+		88301F6716F77C9C0037524D /* UIImage+JSFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88301F6416F77C9C0037524D /* UIImage+JSFlatButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,12 +182,6 @@
 		8810081B16F642E900B9AA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8810082016F642E900B9AA57 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		8810082116F642E900B9AA57 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		8810083016F646C100B9AA57 /* JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatButton.h; sourceTree = "<group>"; };
-		8810083116F646C100B9AA57 /* JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatButton.m; sourceTree = "<group>"; };
-		8810083216F646C100B9AA57 /* UIColor+JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSFlatButton.h"; sourceTree = "<group>"; };
-		8810083316F646C100B9AA57 /* UIColor+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSFlatButton.m"; sourceTree = "<group>"; };
-		8810083616F6480300B9AA57 /* UIImage+JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSFlatButton.h"; sourceTree = "<group>"; };
-		8810083716F6480300B9AA57 /* UIImage+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSFlatButton.m"; sourceTree = "<group>"; };
 		88100A7616F661F100B9AA57 /* 00_License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 00_License.txt; sourceTree = "<group>"; };
 		88100A7716F661F100B9AA57 /* 00_readme.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 00_readme.pdf; sourceTree = "<group>"; };
 		88100A7916F661F100B9AA57 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
@@ -330,6 +324,12 @@
 		88100B0316F661F100B9AA57 /* trolley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trolley.png; sourceTree = "<group>"; };
 		88100B0416F661F100B9AA57 /* truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck.png; sourceTree = "<group>"; };
 		88100B0516F661F100B9AA57 /* waste_basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waste_basket.png; sourceTree = "<group>"; };
+		88301F5F16F77C9C0037524D /* JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatButton.h; sourceTree = "<group>"; };
+		88301F6016F77C9C0037524D /* JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatButton.m; sourceTree = "<group>"; };
+		88301F6116F77C9C0037524D /* UIColor+JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSFlatButton.h"; sourceTree = "<group>"; };
+		88301F6216F77C9C0037524D /* UIColor+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSFlatButton.m"; sourceTree = "<group>"; };
+		88301F6316F77C9C0037524D /* UIImage+JSFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSFlatButton.h"; sourceTree = "<group>"; };
+		88301F6416F77C9C0037524D /* UIImage+JSFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSFlatButton.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,7 +381,7 @@
 				8810081A16F642E900B9AA57 /* MainStoryboard.storyboard */,
 				8810082016F642E900B9AA57 /* DemoViewController.h */,
 				8810082116F642E900B9AA57 /* DemoViewController.m */,
-				8810082F16F646C100B9AA57 /* FlatButton */,
+				88301F5E16F77C9C0037524D /* JSFlatButton */,
 				88100A7516F661F100B9AA57 /* App-Bits Icons */,
 				8810080916F642E900B9AA57 /* Supporting Files */,
 			);
@@ -401,19 +401,6 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		8810082F16F646C100B9AA57 /* FlatButton */ = {
-			isa = PBXGroup;
-			children = (
-				8810083016F646C100B9AA57 /* JSFlatButton.h */,
-				8810083116F646C100B9AA57 /* JSFlatButton.m */,
-				8810083216F646C100B9AA57 /* UIColor+JSFlatButton.h */,
-				8810083316F646C100B9AA57 /* UIColor+JSFlatButton.m */,
-				8810083616F6480300B9AA57 /* UIImage+JSFlatButton.h */,
-				8810083716F6480300B9AA57 /* UIImage+JSFlatButton.m */,
-			);
-			path = FlatButton;
-			sourceTree = SOURCE_ROOT;
 		};
 		88100A7516F661F100B9AA57 /* App-Bits Icons */ = {
 			isa = PBXGroup;
@@ -579,6 +566,19 @@
 			);
 			path = standard;
 			sourceTree = "<group>";
+		};
+		88301F5E16F77C9C0037524D /* JSFlatButton */ = {
+			isa = PBXGroup;
+			children = (
+				88301F5F16F77C9C0037524D /* JSFlatButton.h */,
+				88301F6016F77C9C0037524D /* JSFlatButton.m */,
+				88301F6116F77C9C0037524D /* UIColor+JSFlatButton.h */,
+				88301F6216F77C9C0037524D /* UIColor+JSFlatButton.m */,
+				88301F6316F77C9C0037524D /* UIImage+JSFlatButton.h */,
+				88301F6416F77C9C0037524D /* UIImage+JSFlatButton.m */,
+			);
+			path = JSFlatButton;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -792,9 +792,9 @@
 				8810080F16F642E900B9AA57 /* main.m in Sources */,
 				8810081316F642E900B9AA57 /* AppDelegate.m in Sources */,
 				8810082216F642E900B9AA57 /* DemoViewController.m in Sources */,
-				8810083416F646C100B9AA57 /* JSFlatButton.m in Sources */,
-				8810083516F646C100B9AA57 /* UIColor+JSFlatButton.m in Sources */,
-				8810083816F6480300B9AA57 /* UIImage+JSFlatButton.m in Sources */,
+				88301F6516F77C9C0037524D /* JSFlatButton.m in Sources */,
+				88301F6616F77C9C0037524D /* UIColor+JSFlatButton.m in Sources */,
+				88301F6716F77C9C0037524D /* UIImage+JSFlatButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

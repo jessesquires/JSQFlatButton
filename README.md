@@ -19,7 +19,7 @@ Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP
 
 ## Installation
 
-* Drag the `FlatButton/` folder to your project
+* Drag the `JSFlatButton/` folder to your project
 * Initialize buttons
 	* To create buttons programmatically:
 		* Call `initWithFrame: backgroundColor: foregroundColor:`

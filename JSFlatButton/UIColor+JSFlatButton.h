@@ -1,9 +1,10 @@
 //
-//  UIImage+JSFlatButton.h
+//  UIColor+JSFlatButton.h
 //
 //  Created by Jesse Squires on 3/17/13.
-//  Copyright (c) 2012 Hexed Bits. All rights reserved.
+//  Copyright (c) 2013 Hexed Bits. All rights reserved.
 //
+//  http://www.hexedbits.com
 //
 //  The MIT License
 //  Copyright (c) 2013 Jesse Squires
@@ -26,8 +27,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (JSFlatButton)
+@interface UIColor (JSFlatButton)
 
-- (UIImage *)imageMaskWithColor:(UIColor *)maskColor shadowOffset:(CGPoint)shadow;
+- (UIColor *)darkenedColor;
+- (UIColor *)lightenedColor;
 
 @end
