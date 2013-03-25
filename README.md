@@ -13,9 +13,9 @@ Following recent design trends toward flat design. Get hip. Embrace minimalism.
 * Make flat buttons with text and/or images
 
 ### Icons
-Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). Go show him some love.
+Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). **Go show him some [love](http://store.app-bits.com).**
 
-**READ:** `App-Bits Icons/00_License.txt` and `App-Bits Icons/00_readme.pdf` for details on icon usage
+**READ: [App-Bits License][link1] and [App-Bits README][link2] for details on icon usage.**
 
 ## Installation
 
@@ -60,8 +60,15 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+### Icons
+
+**READ: [App-Bits License][link1] and [App-Bits README][link2] for details on icon usage.**
+
 [img1]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4-1.png
 [img2]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4-2.png
 
 [ref1]:http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIButton_Class/UIButton/UIButton.html
 [ref2]:http://developer.apple.com/library/ios/#documentation/uikit/reference/UIColor_Class/Reference/Reference.html
+
+[link1]:https://github.com/jessesquires/FlatButton/blob/master/App-Bits%20Icons/00_License.txt
+[link2]:https://github.com/jessesquires/FlatButton/blob/master/App-Bits%20Icons/00_readme.pdf
