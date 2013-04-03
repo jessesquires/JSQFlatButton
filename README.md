@@ -45,15 +45,9 @@ Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP
 	* Similarly, you can make a flat button with *text-only* and **no** background color
 * See included demo project: `FlatButtonDemo.xcodeproj` 
 
-## License
+## [MIT License](http://opensource.org/licenses/MIT)
 
-You are free to use this as you please. No attribution necessary. 
-
-**However, a link back to [Hexed Bits](http://www.hexedbits.com) or here would be appreciated.**
-
-**If you use this, please tell me about it!**
-
-[MIT License](http://opensource.org/licenses/MIT)
+You are free to use this as you please. No attribution necessary. **However, a link back to [Hexed Bits](http://www.hexedbits.com) or here would be appreciated. If you use this, please tell me about it!**
 
 Copyright &copy; 2013 Jesse Squires
 
