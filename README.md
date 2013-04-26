@@ -1,4 +1,4 @@
-# FlatButton
+# JSFlatButton
 
 A simple, light-weight, flat design UI button for iOS.
 
@@ -19,7 +19,10 @@ Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP
 
 ## Installation
 
-* Drag the `JSFlatButton/` folder to your project
+Drag the `JSFlatButton/` folder to your project
+
+## How To Use
+
 * Initialize buttons
 	* To create buttons programmatically:
 		* Call `initWithFrame: backgroundColor: foregroundColor:`
