@@ -48,6 +48,12 @@ Drag the `JSFlatButton/` folder to your project
 	* Similarly, you can make a flat button with *text-only* and **no** background color
 * See included demo project: `FlatButtonDemo.xcodeproj` 
 
+## Apps Using This Control
+
+[Eight-Twelve](https://itunes.apple.com/us/app/eight-twelve/id648715570?mt=8)
+
+*[Contact me](mailto:jesse.squires.developer@gmail.com) to have your app listed here.*
+
 ## [MIT License](http://opensource.org/licenses/MIT)
 
 You are free to use this as you please. No attribution necessary. **However, a link back to [Hexed Bits](http://www.hexedbits.com) or here would be appreciated. If you use this, please tell me about it!**
