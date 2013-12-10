@@ -78,3 +78,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [link1]:https://github.com/jessesquires/FlatButton/blob/master/App-Bits%20Icons/00_License.txt
 [link2]:https://github.com/jessesquires/FlatButton/blob/master/App-Bits%20Icons/00_readme.pdf
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/flatbutton/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
