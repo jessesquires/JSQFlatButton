@@ -109,6 +109,7 @@
 - (void)setFlatTitle:(NSString *)title
 {
     if (!title) {
+        [self setTitle:nil forState:UIControlStateNormal];
         return;
     }
     
@@ -122,6 +123,7 @@
 - (void)setFlatImage:(UIImage *)image
 {
     if (!image) {
+        [self setImage:nil forState:UIControlStateNormal];
         return;
     }
     
