@@ -94,8 +94,18 @@
 
 #pragma mark - Setters
 
+/**
+ *  Sets the title for the button via `setTitle: forState:`, passing the specified title and `UIControlStateNormal`. This method sets the title color to the current color values in normalForegroundColor, highlightedForegroundColor, and disabledForegroundColor for each respective state.
+ *
+ *  @param title The title to display in the button.
+ */
 - (void)setFlatTitle:(NSString *)title;
 
+/**
+ *  Sets the image for the button via `setImage: forState:`, passing the specified image and `UIControlStateNormal`. This method masks the image to the current color values in normalForegroundColor, highlightedForegroundColor, and disabledForegroundColor for each respective state.
+ *
+ *  @param image The image to display in the button.
+ */
 - (void)setFlatImage:(UIImage *)image;
 
 @end
