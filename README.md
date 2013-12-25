@@ -1,52 +1,78 @@
-# JSFlatButton
+# JSQFlatButton
+[![Build Status](https://secure.travis-ci.org/jessesquires/JSQFlatButton.png)](http://travis-ci.org/jessesquires/JSQFlatButton) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQFlatButton/badge.png)][docsLink] [![license MIT](http://b.repl.ca/v1/license-MIT-blue.png)][mitLink]
 
-A simple, light-weight, flat design UI button for iOS.
+A light-weight, flat design [UIButton](https://developer.apple.com/library/ios/documentation/uikit/reference/UIButton_Class/UIButton/UIButton.html) for iOS.
 
-![FlatButton Screenshot 1][img1] &nbsp;&nbsp;&nbsp;&nbsp; ![FlatButton Screenshot 2][img2]
+![JSQFlatButton Screenshot][imgLink]
 
-## About
+## Features
 
-Following recent design trends toward flat design. Get hip. Embrace minimalism.
+* Custom normal, highlighted, and disabled background colors
+* Custom normal, highlighted, and disabled foreground colors
+* Custom normal, highlighted, and disabled border colors
+* Corner radius
+* Masks images on iOS 6
 
-* Simple, easy-to-use sublcass of `UIButton`
-* iOS 5.0+, ARC, Universal, Retina, Storyboards
-* Make flat buttons with text and/or images
+## Requirements
 
-### Icons
-Free icons designed by [Darran Morris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). **Go show him some [love](http://store.app-bits.com).**
-
-**READ: [App-Bits License][link1] and [App-Bits README][link2] for details on icon usage.**
+* iOS 6.0+ 
+* ARC
 
 ## Installation
 
-Drag the `JSFlatButton/` folder to your project
+#### From [CocoaPods](http://www.cocoapods.org)
 
-## How To Use
+`pod 'JSQFlatButton'`
 
-* Initialize buttons
-	* To create buttons programmatically:
-		* Call `initWithFrame: backgroundColor: foregroundColor:`
-		* Or, use the [UIButton][ref1] methods `buttonWithType:` with `UIButtonTypeCustom`, or `initWithFrame:`
-	* To create buttons with Storyboards:
-		* Drag a `UIButton` to your view
-		* Set its class to `JSFlatButton` and button type to `Custom` in Interface Builder
-		* Set your `IBOutlet` and `IBAction` accordingly
-* Set button properties `buttonBackgroundColor` and `buttonForegroundColor`
-* **Colors must be set in HSB or RGB color space**
-	* Use the [UIColor][ref2] methods: `colorWithHue: saturation: brightness: alpha:` or `colorWithRed: green: blue: alpha:`
-	* iOS built-in colors **will not** work (e.g., `[UIColor whiteColor]`, `[UIColor darkGrayColor]`, etc.)
-* Call `setFlatTitle:` and `setFlatImage:` to set the button title and image, respectively
-* You may set your button title font and other attributes as you normally would with `UIButton`
-* *Special Options*
-	* Set `shouldHighlightImage` to `YES` to optionally highlight the button image when pressed (default value is `NO`)
-	* Set `shouldHighlightText` to `YES`to optionally highlight the button title text when pressed (default value is `NO`)
-	* To make a flat button with an *image-only* and **no** background color:
-		* Set `buttonBackgroundColor` to `nil`
-		* Set `shouldHighlightImage` to `YES`
-		* Set your `buttonForegroundColor` to whatever you want
-		* Call `setFlatTitle:` with `nil`
-	* Similarly, you can make a flat button with *text-only* and **no** background color
-* See included demo project: `FlatButtonDemo.xcodeproj` 
+#### From source
+
+* Drag the `JSQFlatButton/` folder to your project
+* Add the `QuartzCore.framework` to your project
+
+#### Too cool for [ARC](https://developer.apple.com/library/mac/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)?
+
+* Add the `-fobjc-arc` compiler flag to all source files in your project in Target Settings > Build Phases > Compile Sources.
+
+## Getting Started
+
+See the included demo project: `FlatButtonDemo.xcodeproj`
+
+## Documentation
+
+Documentation is [available here][docsLink] via [CocoaDocs](http://cocoadocs.org). Thanks [@CocoaDocs](https://twitter.com/CocoaDocs)!
+
+## Donate
+
+Support the developement of this **free**, open-source control! via [Square Cash](https://square.com/cash).
+
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$1&body=Thanks for developing JSQFlatButton!">Send $1</a> <em>Just saying thanks!</em></h4>
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$5&body=Thanks for developing JSQFlatButton!">Send $5</a> <em>This control is great!</em></h4>
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQFlatButton!">Send $10</a> <em>This totally saved me time!</em></h4>
+
+## How To Contribute
+
+1. [Find an issue](https://github.com/jessesquires/JSQFlatButton/issues?sort=created&state=open) to work on, or create a new one
+2. Fork me
+3. Create a new branch with a sweet fucking name: `git checkout -b issue_<##>_<featureOrFix>`
+4. Do some motherfucking programming
+5. Write [unit tests](http://nshipster.com/unit-testing), if possible
+6. Keep your code nice and clean by adhering to the following standards: 
+    * Google's [Objective-C Style Guide](http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml)
+    * Apple's [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
+7. Don't break shit, like unit tests
+8. Update the documentation header comments, if needed
+9. Merge the latest from `develop` and **resolve any conflicts** (*before submitting a pull request!*)
+10. Submit a pull request to the `develop` **[branch](https://github.com/jessesquires/JSQFlatButton/tree/develop)**
+
+## Credits
+
+Created by [@jesse_squires](https://twitter.com/jesse_squires), a [programming-motherfucker](http://programming-motherfucker.com).
+
+Many thanks to [the contributors](https://github.com/jessesquires/JSQFlatButton/graphs/contributors) of this project.
+
+Demo icons designed by [@darranmorris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). *Go show him some [love](http://store.app-bits.com).*
+
+*See [App-Bits License]() and [App-Bits README]() for details on icon usage.*
 
 ## Apps Using This Control
 
@@ -54,31 +80,18 @@ Drag the `JSFlatButton/` folder to your project
 
 *[Contact me](mailto:jesse.squires.developer@gmail.com) to have your app listed here.*
 
-## [MIT License](http://opensource.org/licenses/MIT)
+## [MIT License][mitLink]
 
-You are free to use this as you please. No attribution necessary. **However, a link back to [Hexed Bits](http://www.hexedbits.com) or here would be appreciated. If you use this, please tell me about it!**
+You are free to use this as you please. **No attribution necessary, but much appreciated.**
 
 Copyright &copy; 2013 Jesse Squires
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-### Icons
-
-**READ: [App-Bits License][link1] and [App-Bits README][link2] for details on icon usage.**
-
-[img1]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4-1.png
-[img2]:https://raw.github.com/jessesquires/FlatButton/master/Screenshots/screenshot-iphone4-2.png
-
-[ref1]:http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIButton_Class/UIButton/UIButton.html
-[ref2]:http://developer.apple.com/library/ios/#documentation/uikit/reference/UIColor_Class/Reference/Reference.html
-
-[link1]:https://github.com/jessesquires/FlatButton/blob/master/App-Bits%20Icons/00_License.txt
-[link2]:https://github.com/jessesquires/FlatButton/blob/master/App-Bits%20Icons/00_readme.pdf
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/flatbutton/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+[docsLink]:http://cocoadocs.org/docsets/JSQFlatButton/2.0.0
+[mitLink]:http://opensource.org/licenses/MIT
+[imgLink]:https://raw.github.com/jessesquires/JSQFlatButton/master/Screenshots/screenshot.png
