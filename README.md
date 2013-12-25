@@ -1,7 +1,7 @@
-# JSQFlatButton
-[![Build Status](https://secure.travis-ci.org/jessesquires/JSQFlatButton.png)](http://travis-ci.org/jessesquires/JSQFlatButton) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQFlatButton/badge.png)][docsLink] [![license MIT](http://b.repl.ca/v1/license-MIT-blue.png)][mitLink]
+# JSQFlatButton [![Build Status](https://secure.travis-ci.org/jessesquires/JSQFlatButton.png)](http://travis-ci.org/jessesquires/JSQFlatButton) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQFlatButton/badge.png)][docsLink] [![license MIT](http://b.repl.ca/v1/license-MIT-blue.png)][mitLink]
 
 A light-weight, flat design [UIButton](https://developer.apple.com/library/ios/documentation/uikit/reference/UIButton_Class/UIButton/UIButton.html) for iOS.
+
 
 ![JSQFlatButton Screenshot][imgLink]
 
@@ -72,7 +72,7 @@ Many thanks to [the contributors](https://github.com/jessesquires/JSQFlatButton/
 
 Demo icons designed by [@darranmorris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). *Go show him some [love](http://store.app-bits.com).*
 
-*See [App-Bits License]() and [App-Bits README]() for details on icon usage.*
+*See [App-Bits License](https://raw.github.com/jessesquires/JSQFlatButton/master/appbits_license.txt) and [App-Bits README](https://raw.github.com/jessesquires/JSQFlatButton/master/appbits_readme.pdf) for details on icon usage.*
 
 ## Apps Using This Control
 
