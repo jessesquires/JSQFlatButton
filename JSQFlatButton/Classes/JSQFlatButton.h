@@ -12,18 +12,24 @@
 
 @interface JSQFlatButton : UIButton
 
-@property (strong, nonatomic) UIColor *buttonBackgroundColor;
-@property (strong, nonatomic) UIColor *buttonForegroundColor;
-@property (assign, nonatomic) BOOL shouldHighlightText;
-@property (assign, nonatomic) BOOL shouldHighlightImage;
+@property (strong, nonatomic) UIColor *normalBackgroundColor;
+@property (strong, nonatomic) UIColor *highlightedBackgroundColor;
+@property (strong, nonatomic) UIColor *disabledBackgroundColor;
+
+@property (strong, nonatomic) UIColor *normalForegroundColor;
+@property (strong, nonatomic) UIColor *highlightedForegroundColor;
+@property (strong, nonatomic) UIColor *disabledForegroundColor;
 
 #pragma mark - Initialization
-- (id)initWithFrame:(CGRect)frame
-    backgroundColor:(UIColor *)back
-    foregroundColor:(UIColor *)fore;
 
-#pragma mark - Appearance
+- (instancetype)initWithFrame:(CGRect)frame
+              backgroundColor:(UIColor *)backgroundColor
+              foregroundColor:(UIColor *)foregroundColor;
+
+#pragma mark - Setters
+
 - (void)setFlatTitle:(NSString *)title;
+
 - (void)setFlatImage:(UIImage *)image;
 
 @end

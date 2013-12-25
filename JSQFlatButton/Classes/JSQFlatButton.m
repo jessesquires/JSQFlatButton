@@ -12,14 +12,12 @@
 
 @interface JSQFlatButton ()
 
-@property (strong, nonatomic) UIColor *backgroundHighlightedColor;
-@property (strong, nonatomic) UIColor *foregroundHighlightedColor;
+- (void)jsq_refreshTitleAndImage;
 
-- (void)setup;
-- (void)refreshTitleAndImage;
+- (UIColor *)jsq_darkenedColorFromColor:(UIColor *)color;
+- (UIColor *)jsq_lightenedColorFromColor:(UIColor *)color;
 
-- (UIColor *)darkenedColorFromColor:(UIColor *)color;
-- (UIColor *)lightenedColorFromColor:(UIColor *)color;
+- (UIImage *)jsq_image:(UIImage *)image maskedWithColor:(UIColor *)maskColor;
 
 @end
 
@@ -27,139 +25,127 @@
 
 @implementation JSQFlatButton
 
-@synthesize buttonBackgroundColor;
-@synthesize backgroundHighlightedColor;
-@synthesize buttonForegroundColor;
-@synthesize foregroundHighlightedColor;
-@synthesize shouldHighlightText;
-@synthesize shouldHighlightImage;
-
 #pragma mark - Initialization
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)back foregroundColor:(UIColor *)fore
+
+- (instancetype)initWithFrame:(CGRect)frame
+              backgroundColor:(UIColor *)backgroundColor
+              foregroundColor:(UIColor *)foregroundColor
 {
     self = [super initWithFrame:frame];
-    if(self) {
-        self.buttonBackgroundColor = back;
-        self.buttonForegroundColor = fore;
-        [self setup];
+    if (self) {
+        [self setNormalBackgroundColor:backgroundColor];
+        [self setNormalForegroundColor:foregroundColor];
     }
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (void)dealloc
 {
-    self = [super initWithFrame:frame];
-    if(self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if(self) {
-        [self setup];
-    }
-    return self;
+    _normalBackgroundColor = nil;
+    _highlightedBackgroundColor = nil;
+    _disabledBackgroundColor = nil;
+    
+    _normalForegroundColor = nil;
+    _highlightedForegroundColor = nil;
+    _disabledForegroundColor = nil;
 }
 
 #pragma mark - Setters
-- (void)setButtonBackgroundColor:(UIColor *)color
+
+- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor
 {
-    self.backgroundColor = color;
-    buttonBackgroundColor = color;
-    backgroundHighlightedColor = [self darkenedColorFromColor:color];
-    [self refreshTitleAndImage];
+    self.backgroundColor = normalBackgroundColor;
+    _normalBackgroundColor = normalBackgroundColor;
+    
+    if (!_highlightedBackgroundColor) {
+        _highlightedBackgroundColor = [self jsq_darkenedColorFromColor:normalBackgroundColor];
+    }
+    
+    if (!_disabledBackgroundColor) {
+        _disabledBackgroundColor = [_highlightedBackgroundColor colorWithAlphaComponent:0.75f];
+    }
+    
+    [self jsq_refreshTitleAndImage];
 }
 
-- (void)setButtonForegroundColor:(UIColor *)color
+- (void)setNormalForegroundColor:(UIColor *)normalForegroundColor
 {
-    buttonForegroundColor = color;
-    foregroundHighlightedColor = [self darkenedColorFromColor:color];
-    [self refreshTitleAndImage];
+    _normalForegroundColor = normalForegroundColor;
+    
+    if (!_highlightedForegroundColor) {
+        _highlightedForegroundColor = [self jsq_lightenedColorFromColor:normalForegroundColor];
+    }
+    
+    if (!_disabledForegroundColor) {
+        _disabledForegroundColor = [_highlightedForegroundColor colorWithAlphaComponent:0.75f];
+    }
+    
+    [self jsq_refreshTitleAndImage];
 }
 
-- (void)setShouldHighlightText:(BOOL)highlight
+#pragma mark - JSQFlatButton
+
+- (void)setFlatTitle:(NSString *)title
 {
-    shouldHighlightText = highlight;
-    [self refreshTitleAndImage];
+    [self setTitle:title forState:UIControlStateNormal];
+    [self setTitle:title forState:UIControlStateHighlighted];
+    
+    [self setTitleColor:self.normalForegroundColor forState:UIControlStateNormal];
+    [self setTitleColor:self.highlightedForegroundColor forState:UIControlStateHighlighted];
+    [self setTitleColor:self.disabledForegroundColor forState:UIControlStateDisabled];
 }
 
-- (void)setShouldHighlightImage:(BOOL)highlight
+- (void)setFlatImage:(UIImage *)image
 {
-    shouldHighlightImage = highlight;
-    [self refreshTitleAndImage];
+    [self setImage:[self jsq_image:image maskedWithColor:self.normalForegroundColor]
+          forState:UIControlStateNormal];
+    
+    [self setImage:[self jsq_image:image maskedWithColor:self.highlightedForegroundColor]
+          forState:UIControlStateHighlighted];
+    
+    [self setImage:[self jsq_image:image maskedWithColor:self.disabledForegroundColor]
+          forState:UIControlStateDisabled];
 }
 
-#pragma mark - Parent overrides
+#pragma mark - UIButton
+
 - (void)setHighlighted:(BOOL)highlighted
 {
     [super setHighlighted:highlighted];
-    self.backgroundColor = highlighted ? backgroundHighlightedColor : buttonBackgroundColor;
+    self.backgroundColor = highlighted ? self.highlightedBackgroundColor : self.normalBackgroundColor;
     [self setNeedsDisplay];
 }
 
 - (void)setEnabled:(BOOL)enabled
 {
     [super setEnabled:enabled];
-    self.backgroundColor = enabled ? buttonBackgroundColor : backgroundHighlightedColor;
+    self.backgroundColor = enabled ? self.normalBackgroundColor : self.disabledBackgroundColor;
     [self setNeedsDisplay];
 }
 
-#pragma mark - Appearance
-- (void)setFlatTitle:(NSString *)title
-{
-    [self setTitle:title forState:UIControlStateNormal];
-    [self setTitle:title forState:UIControlStateHighlighted];
-    
-    [self setTitleColor:self.buttonForegroundColor forState:UIControlStateNormal];
-    
-    [self setTitleColor:(self.shouldHighlightText ? self.foregroundHighlightedColor : self.buttonForegroundColor)
-               forState:UIControlStateHighlighted];
-}
-
-- (void)setFlatImage:(UIImage *)image
-{
-    image = [self image:image maskedWithColor:self.buttonForegroundColor];
-  
-    [self setImage:image forState:UIControlStateNormal];
-    
-    if(self.shouldHighlightImage) {
-        image = [self image:image maskedWithColor:self.foregroundHighlightedColor];
-    }
-    
-    [self setImage:image forState:UIControlStateHighlighted];
-}
-
 #pragma mark - Utilities
-- (void)setup
-{
-    self.shouldHighlightText = NO;
-    self.shouldHighlightImage = NO;
-}
 
-- (void)refreshTitleAndImage
+- (void)jsq_refreshTitleAndImage
 {
     [self setFlatTitle:self.titleLabel.text];
     [self setFlatImage:self.imageView.image];
 }
 
-- (UIColor *)darkenedColorFromColor:(UIColor *)color
+- (UIColor *)jsq_darkenedColorFromColor:(UIColor *)color
 {
     CGFloat h,s,b,a;
     [color getHue:&h saturation:&s brightness:&b alpha:&a];
     return [UIColor colorWithHue:h saturation:s brightness:b * 0.85f alpha:a];
 }
 
-- (UIColor *)lightenedColorFromColor:(UIColor *)color
+- (UIColor *)jsq_lightenedColorFromColor:(UIColor *)color
 {
     CGFloat h,s,b,a;
     [color getHue:&h saturation:&s brightness:&b alpha:&a];
     return [UIColor colorWithHue:h saturation:s brightness:b * 1.15f alpha:a];
 }
 
-- (UIImage *)image:(UIImage *)image maskedWithColor:(UIColor *)maskColor
+- (UIImage *)jsq_image:(UIImage *)image maskedWithColor:(UIColor *)maskColor
 {
     CGRect imageRect = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
     
