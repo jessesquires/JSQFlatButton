@@ -14,37 +14,81 @@
                         <viewControllerLayoutGuide type="bottom" id="rYq-vs-AXC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-gv-df3" customClass="JSQFlatButton">
-                                <rect key="frame" x="69" y="195" width="182" height="54"/>
+                                <rect key="frame" x="69" y="106" width="182" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="2dx-a4-rV5"/>
-                                    <constraint firstAttribute="width" constant="182" id="olU-KZ-0SJ"/>
+                                    <constraint firstAttribute="height" constant="54" id="Qew-Tt-0ew"/>
+                                    <constraint firstAttribute="width" constant="182" id="ain-6b-NRq"/>
                                 </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T6-qm-RZx" customClass="JSQFlatButton">
-                                <rect key="frame" x="69" y="257" width="182" height="54"/>
+                                <rect key="frame" x="69" y="180" width="182" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="Trg-xg-VOM"/>
-                                    <constraint firstAttribute="height" constant="54" id="py3-8I-osl"/>
+                                    <constraint firstAttribute="width" constant="182" id="kW4-jv-8XC"/>
+                                    <constraint firstAttribute="height" constant="54" id="nHv-zh-Bhw"/>
                                 </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWB-qt-UWR" customClass="JSQFlatButton">
-                                <rect key="frame" x="69" y="319" width="182" height="54"/>
+                                <rect key="frame" x="69" y="254" width="182" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="R9d-mT-2LI"/>
-                                    <constraint firstAttribute="width" constant="182" id="jcb-MG-Pfm"/>
+                                    <constraint firstAttribute="height" constant="54" id="Bfp-le-6dl"/>
+                                    <constraint firstAttribute="width" constant="182" id="GeL-fQ-6FN"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JSQFlatButton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJr-GB-8nf">
+                                <rect key="frame" x="69" y="56" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Th7-fG-zTY"/>
+                                    <constraint firstAttribute="width" constant="182" id="Ye9-kF-8DB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tN6-7E-bck" customClass="JSQFlatButton">
+                                <rect key="frame" x="98" y="327" width="62" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="FY4-kU-FJP"/>
+                                    <constraint firstAttribute="height" constant="40" id="Ykb-jF-QaH"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqC-j6-IkR" customClass="JSQFlatButton">
+                                <rect key="frame" x="181" y="337" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="cc1-NF-cOF"/>
+                                    <constraint firstAttribute="height" constant="30" id="gUL-Uj-fvk"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWG-lZ-iwv" customClass="JSQFlatButton">
+                                <rect key="frame" x="69" y="388" width="182" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="fMV-af-fvX"/>
+                                    <constraint firstAttribute="width" constant="182" id="kJA-hy-VUo"/>
                                 </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,18 +97,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gWB-qt-UWR" firstAttribute="leading" secondItem="0T6-qm-RZx" secondAttribute="leading" id="2Zd-Kl-ina"/>
-                            <constraint firstItem="0T6-qm-RZx" firstAttribute="leading" secondItem="WWh-gv-df3" secondAttribute="leading" id="5k2-ln-Bh8"/>
-                            <constraint firstItem="WWh-gv-df3" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hBh-21-NgN"/>
-                            <constraint firstItem="gWB-qt-UWR" firstAttribute="top" secondItem="0T6-qm-RZx" secondAttribute="bottom" constant="8" symbolic="YES" id="jrw-Mn-6Ci"/>
-                            <constraint firstItem="0T6-qm-RZx" firstAttribute="top" secondItem="WWh-gv-df3" secondAttribute="bottom" constant="8" symbolic="YES" id="o9P-im-z6J"/>
-                            <constraint firstItem="WWh-gv-df3" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-62" id="upr-bP-6a2"/>
+                            <constraint firstItem="0T6-qm-RZx" firstAttribute="top" secondItem="WWh-gv-df3" secondAttribute="bottom" constant="20" id="6Rz-G1-3ub"/>
+                            <constraint firstItem="0T6-qm-RZx" firstAttribute="leading" secondItem="gWB-qt-UWR" secondAttribute="leading" id="Bae-gh-7qz"/>
+                            <constraint firstItem="pWG-lZ-iwv" firstAttribute="top" secondItem="tN6-7E-bck" secondAttribute="bottom" constant="21" id="FUu-T4-DWg"/>
+                            <constraint firstItem="pJr-GB-8nf" firstAttribute="top" secondItem="uiu-hc-Ytn" secondAttribute="bottom" constant="36" id="KFi-gl-Vpa"/>
+                            <constraint firstItem="gWB-qt-UWR" firstAttribute="top" secondItem="0T6-qm-RZx" secondAttribute="bottom" constant="20" id="Mkf-RT-q0y"/>
+                            <constraint firstItem="0T6-qm-RZx" firstAttribute="leading" secondItem="WWh-gv-df3" secondAttribute="leading" id="NtD-lk-JnX"/>
+                            <constraint firstItem="pWG-lZ-iwv" firstAttribute="leading" secondItem="tN6-7E-bck" secondAttribute="leading" constant="-29" id="W2s-Zy-sQF"/>
+                            <constraint firstItem="pJr-GB-8nf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="g9J-yy-Ump"/>
+                            <constraint firstItem="tN6-7E-bck" firstAttribute="top" secondItem="gWB-qt-UWR" secondAttribute="bottom" constant="19" id="gqF-Rs-NaB"/>
+                            <constraint firstItem="XqC-j6-IkR" firstAttribute="baseline" secondItem="tN6-7E-bck" secondAttribute="baseline" constant="5" id="pgo-SC-lpI"/>
+                            <constraint firstItem="tN6-7E-bck" firstAttribute="leading" secondItem="gWB-qt-UWR" secondAttribute="leading" constant="29" id="qWf-eZ-Abc"/>
+                            <constraint firstItem="pJr-GB-8nf" firstAttribute="leading" secondItem="WWh-gv-df3" secondAttribute="leading" id="qzQ-Ra-U6m"/>
+                            <constraint firstItem="WWh-gv-df3" firstAttribute="top" secondItem="pJr-GB-8nf" secondAttribute="bottom" constant="20" id="tXH-aK-ibO"/>
+                            <constraint firstItem="XqC-j6-IkR" firstAttribute="trailing" secondItem="gWB-qt-UWR" secondAttribute="trailing" constant="-30" id="xxL-Fd-WEa"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button0" destination="WWh-gv-df3" id="PqR-iX-nDj"/>
                         <outlet property="button1" destination="0T6-qm-RZx" id="bFD-Xn-sZB"/>
-                        <outlet property="button2" destination="gWB-qt-UWR" id="7x8-Eh-bB6"/>
+                        <outlet property="button2" destination="gWB-qt-UWR" id="aP8-2f-zID"/>
+                        <outlet property="button3" destination="tN6-7E-bck" id="Bgp-un-7dk"/>
+                        <outlet property="button4" destination="XqC-j6-IkR" id="a8D-OX-7tW"/>
+                        <outlet property="button5" destination="pWG-lZ-iwv" id="oGz-rT-5md"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -75,6 +130,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
