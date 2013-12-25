@@ -2,7 +2,6 @@
 
 A light-weight, flat design [UIButton](https://developer.apple.com/library/ios/documentation/uikit/reference/UIButton_Class/UIButton/UIButton.html) for iOS.
 
-
 ![JSQFlatButton Screenshot][imgLink]
 
 ## Features
@@ -95,3 +94,5 @@ Copyright &copy; 2013 Jesse Squires
 [docsLink]:http://cocoadocs.org/docsets/JSQFlatButton/2.0.0
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLink]:https://raw.github.com/jessesquires/JSQFlatButton/master/Screenshots/screenshot.png
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/jsqflatbutton/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
