@@ -70,6 +70,7 @@
 
 - (void)setNormalForegroundColor:(UIColor *)normalForegroundColor
 {
+    self.tintColor = normalForegroundColor;
     _normalForegroundColor = normalForegroundColor;
     
     if (!_highlightedForegroundColor) {
@@ -120,6 +121,7 @@
 {
     [super setHighlighted:highlighted];
     self.backgroundColor = highlighted ? self.highlightedBackgroundColor : self.normalBackgroundColor;
+    self.tintColor = highlighted ? self.highlightedForegroundColor : self.normalForegroundColor;
     [self setNeedsDisplay];
 }
 
@@ -127,6 +129,7 @@
 {
     [super setEnabled:enabled];
     self.backgroundColor = enabled ? self.normalBackgroundColor : self.disabledBackgroundColor;
+    self.tintColor = enabled ? self.normalForegroundColor : self.disabledForegroundColor;
     [self setNeedsDisplay];
 }
 
