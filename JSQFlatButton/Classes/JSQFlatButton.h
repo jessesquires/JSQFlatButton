@@ -72,6 +72,20 @@
 
 #pragma mark - Initialization
 
+/**
+ *  Initializes and returns a button having the given frame, backgroundColor, foregroundColor, title, and image. This method calls `setFlatTitle:` and `setFlatImage:` with the specified title and image, respectively.
+ *
+ *  @param frame           A rectangle specifying the initial location and size of the button in its superview's coordinates.
+ *  @param backgroundColor A color specifying the background color of the button in its default state.
+ *  @param foregroundColor A color specifying the foreground color of the button in its default state.
+ *  @param title           The title of the button in its default state. This text is colored with the specified foregroundColor.
+ *  @param image           The image of the button in its default state. This image is masked with the specified foregroundColor.
+ *
+ *  @see `setFlatTitle:`
+ *  @see `setFlatImage:`
+ *
+ *  @return An initialized `JSQFlatButton` object or `nil` if the object could not be successfully initialized.
+ */
 - (instancetype)initWithFrame:(CGRect)frame
               backgroundColor:(UIColor *)backgroundColor
               foregroundColor:(UIColor *)foregroundColor
