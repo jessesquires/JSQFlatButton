@@ -3,7 +3,3 @@ language: objective-c
 script: 
 - xctool -project FlatButtonDemo.xcodeproj -scheme FlatButtonDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build test
 - xctool -project FlatButtonDemo.xcodeproj -scheme FlatButtonDemoTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build run-tests -freshSimulator -freshInstall
-
-branches:
-only:
-- master
