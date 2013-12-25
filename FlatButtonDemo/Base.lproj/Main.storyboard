@@ -18,11 +18,33 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-gv-df3" customClass="JSQFlatButton">
-                                <rect key="frame" x="90" y="257" width="140" height="54"/>
+                                <rect key="frame" x="69" y="195" width="182" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="2dx-a4-rV5"/>
-                                    <constraint firstAttribute="width" constant="140" id="olU-KZ-0SJ"/>
+                                    <constraint firstAttribute="width" constant="182" id="olU-KZ-0SJ"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T6-qm-RZx" customClass="JSQFlatButton">
+                                <rect key="frame" x="69" y="257" width="182" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="Trg-xg-VOM"/>
+                                    <constraint firstAttribute="height" constant="54" id="py3-8I-osl"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWB-qt-UWR" customClass="JSQFlatButton">
+                                <rect key="frame" x="69" y="319" width="182" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="R9d-mT-2LI"/>
+                                    <constraint firstAttribute="width" constant="182" id="jcb-MG-Pfm"/>
                                 </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,12 +53,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gWB-qt-UWR" firstAttribute="leading" secondItem="0T6-qm-RZx" secondAttribute="leading" id="2Zd-Kl-ina"/>
+                            <constraint firstItem="0T6-qm-RZx" firstAttribute="leading" secondItem="WWh-gv-df3" secondAttribute="leading" id="5k2-ln-Bh8"/>
                             <constraint firstItem="WWh-gv-df3" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hBh-21-NgN"/>
-                            <constraint firstItem="WWh-gv-df3" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="upr-bP-6a2"/>
+                            <constraint firstItem="gWB-qt-UWR" firstAttribute="top" secondItem="0T6-qm-RZx" secondAttribute="bottom" constant="8" symbolic="YES" id="jrw-Mn-6Ci"/>
+                            <constraint firstItem="0T6-qm-RZx" firstAttribute="top" secondItem="WWh-gv-df3" secondAttribute="bottom" constant="8" symbolic="YES" id="o9P-im-z6J"/>
+                            <constraint firstItem="WWh-gv-df3" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-62" id="upr-bP-6a2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button0" destination="WWh-gv-df3" id="ZVX-YE-Ohq"/>
+                        <outlet property="button0" destination="WWh-gv-df3" id="PqR-iX-nDj"/>
+                        <outlet property="button1" destination="0T6-qm-RZx" id="bFD-Xn-sZB"/>
+                        <outlet property="button2" destination="gWB-qt-UWR" id="7x8-Eh-bB6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

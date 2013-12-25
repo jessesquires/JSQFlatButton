@@ -14,5 +14,7 @@
 @interface JSQViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet JSQFlatButton *button0;
+@property (weak, nonatomic) IBOutlet JSQFlatButton *button1;
+@property (weak, nonatomic) IBOutlet JSQFlatButton *button2;
 
 @end
