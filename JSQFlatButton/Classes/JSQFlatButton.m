@@ -12,6 +12,8 @@
 
 @interface JSQFlatButton ()
 
+- (void)jsq_setup;
+
 - (void)jsq_refreshTitleAndImage;
 
 - (UIColor *)jsq_darkenedColorFromColor:(UIColor *)color;
@@ -27,14 +29,32 @@
 
 #pragma mark - Initialization
 
+- (void)jsq_setup
+{
+    self.showsTouchWhenHighlighted = NO;
+    self.adjustsImageWhenHighlighted = NO;
+    self.adjustsImageWhenDisabled = NO;
+    self.titleLabel.shadowOffset = CGSizeZero;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
               backgroundColor:(UIColor *)backgroundColor
               foregroundColor:(UIColor *)foregroundColor
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self jsq_setup];
         [self setNormalBackgroundColor:backgroundColor];
         [self setNormalForegroundColor:foregroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self jsq_setup];
     }
     return self;
 }
