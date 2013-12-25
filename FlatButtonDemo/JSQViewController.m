@@ -70,6 +70,19 @@
     self.button5.normalBorderColor = [UIColor colorWithRed:0.0f green:0.49f blue:0.96f alpha:1.0f];
     self.button5.highlightedBorderColor = [UIColor colorWithHue:0.0f saturation:0.0f brightness:1.0f alpha:1.0f];
     [self.button5 setFlatTitle:@"Border & Rounded"];
+    
+    
+    CGRect frame = CGRectMake(self.button5.frame.origin.x,
+                              self.button5.frame.origin.y + self.button5.frame.size.height + 40.0f,
+                              self.button5.frame.size.width,
+                              self.button5.frame.size.height);
+    
+    JSQFlatButton *btn = [[JSQFlatButton alloc] initWithFrame:frame
+                                              backgroundColor:[UIColor colorWithRed:0.18f green:0.67f blue:0.84f alpha:1.0f]
+                                              foregroundColor:[UIColor colorWithRed:0.35f green:0.35f blue:0.81f alpha:1.0f]
+                                                        title:@"  Programmatic"
+                                                        image:[UIImage imageNamed:@"pause"]];
+    [self.view addSubview:btn];
 }
 
 @end
