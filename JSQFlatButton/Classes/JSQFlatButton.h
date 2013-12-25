@@ -20,6 +20,13 @@
 @property (strong, nonatomic) UIColor *highlightedForegroundColor;
 @property (strong, nonatomic) UIColor *disabledForegroundColor;
 
+@property (strong, nonatomic) UIColor *normalBorderColor;
+@property (strong, nonatomic) UIColor *highlightedBorderColor;
+@property (strong, nonatomic) UIColor *disabledBorderColor;
+
+@property (assign, nonatomic) CGFloat cornerRadius;
+@property (assign, nonatomic) CGFloat borderWidth;
+
 #pragma mark - Initialization
 
 - (instancetype)initWithFrame:(CGRect)frame

@@ -9,6 +9,9 @@
 //
 
 #import "JSQFlatButton.h"
+#import <QuartzCore/QuartzCore.h>
+
+static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
 @interface JSQFlatButton ()
 
@@ -68,6 +71,10 @@
     _normalForegroundColor = nil;
     _highlightedForegroundColor = nil;
     _disabledForegroundColor = nil;
+    
+    _normalBorderColor = nil;
+    _highlightedBorderColor = nil;
+    _disabledBorderColor = nil;
 }
 
 #pragma mark - Setters
@@ -82,7 +89,7 @@
     }
     
     if (!_disabledBackgroundColor) {
-        _disabledBackgroundColor = [_highlightedBackgroundColor colorWithAlphaComponent:0.75f];
+        _disabledBackgroundColor = [_highlightedBackgroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
     
     [self jsq_refreshTitleAndImage];
@@ -98,10 +105,34 @@
     }
     
     if (!_disabledForegroundColor) {
-        _disabledForegroundColor = [_highlightedForegroundColor colorWithAlphaComponent:0.75f];
+        _disabledForegroundColor = [_highlightedForegroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
     
     [self jsq_refreshTitleAndImage];
+}
+
+- (void)setNormalBorderColor:(UIColor *)normalBorderColor
+{
+    self.layer.borderColor = normalBorderColor.CGColor;
+    _normalBorderColor = normalBorderColor;
+    
+    if (!_highlightedBorderColor) {
+        _highlightedBorderColor = [self jsq_lightenedColorFromColor:normalBorderColor];
+    }
+    
+    if (!_disabledBorderColor) {
+        _disabledBorderColor = [_highlightedBorderColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    }
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius
+{
+    self.layer.cornerRadius = cornerRadius;
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth
+{
+    self.layer.borderWidth = borderWidth;
 }
 
 #pragma mark - JSQFlatButton
@@ -144,6 +175,7 @@
     [super setHighlighted:highlighted];
     self.backgroundColor = highlighted ? self.highlightedBackgroundColor : self.normalBackgroundColor;
     self.tintColor = highlighted ? self.highlightedForegroundColor : self.normalForegroundColor;
+    self.layer.borderColor = highlighted ? self.highlightedBorderColor.CGColor : self.normalBorderColor.CGColor;
     [self setNeedsDisplay];
 }
 
@@ -152,6 +184,7 @@
     [super setEnabled:enabled];
     self.backgroundColor = enabled ? self.normalBackgroundColor : self.disabledBackgroundColor;
     self.tintColor = enabled ? self.normalForegroundColor : self.disabledForegroundColor;
+    self.layer.borderColor = enabled ? self.normalBorderColor.CGColor : self.disabledBorderColor.CGColor;
     [self setNeedsDisplay];
 }
 
@@ -185,7 +218,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextScaleCTM(context, 1.0f, -1.0f);
-    CGContextTranslateCTM(context, 0.0f, -(imageRect.size.height));
+    CGContextTranslateCTM(context, 0.0f, -imageRect.size.height);
 
     CGContextClipToMask(context, imageRect, image.CGImage);
     CGContextSetFillColorWithColor(context, maskColor.CGColor);
