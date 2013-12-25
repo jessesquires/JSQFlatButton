@@ -87,8 +87,11 @@
 
 - (void)setFlatTitle:(NSString *)title
 {
+    if (!title) {
+        return;
+    }
+    
     [self setTitle:title forState:UIControlStateNormal];
-    [self setTitle:title forState:UIControlStateHighlighted];
     
     [self setTitleColor:self.normalForegroundColor forState:UIControlStateNormal];
     [self setTitleColor:self.highlightedForegroundColor forState:UIControlStateHighlighted];
@@ -97,6 +100,10 @@
 
 - (void)setFlatImage:(UIImage *)image
 {
+    if (!image) {
+        return;
+    }
+    
     [self setImage:[self jsq_image:image maskedWithColor:self.normalForegroundColor]
           forState:UIControlStateNormal];
     

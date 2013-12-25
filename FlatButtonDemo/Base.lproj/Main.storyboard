@@ -16,8 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-gv-df3" customClass="JSQFlatButton">
+                                <rect key="frame" x="90" y="257" width="140" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="2dx-a4-rV5"/>
+                                    <constraint firstAttribute="width" constant="140" id="olU-KZ-0SJ"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WWh-gv-df3" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hBh-21-NgN"/>
+                            <constraint firstItem="WWh-gv-df3" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="upr-bP-6a2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button0" destination="WWh-gv-df3" id="ZVX-YE-Ohq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
