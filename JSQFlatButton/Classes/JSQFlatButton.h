@@ -74,7 +74,9 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
               backgroundColor:(UIColor *)backgroundColor
-              foregroundColor:(UIColor *)foregroundColor;
+              foregroundColor:(UIColor *)foregroundColor
+                        title:(NSString *)title
+                        image:(UIImage *)image;
 
 #pragma mark - Setters
 

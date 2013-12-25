@@ -43,12 +43,16 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 - (instancetype)initWithFrame:(CGRect)frame
               backgroundColor:(UIColor *)backgroundColor
               foregroundColor:(UIColor *)foregroundColor
+                        title:(NSString *)title
+                        image:(UIImage *)image
 {
     self = [super initWithFrame:frame];
     if (self) {
         [self jsq_setup];
         [self setNormalBackgroundColor:backgroundColor];
         [self setNormalForegroundColor:foregroundColor];
+        [self setFlatTitle:title];
+        [self setFlatImage:image];
     }
     return self;
 }
@@ -146,9 +150,9 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     
     [self setTitle:title forState:UIControlStateNormal];
     
-    [self setTitleColor:self.normalForegroundColor forState:UIControlStateNormal];
-    [self setTitleColor:self.highlightedForegroundColor forState:UIControlStateHighlighted];
-    [self setTitleColor:self.disabledForegroundColor forState:UIControlStateDisabled];
+    [self setTitleColor:_normalForegroundColor forState:UIControlStateNormal];
+    [self setTitleColor:_highlightedForegroundColor forState:UIControlStateHighlighted];
+    [self setTitleColor:_disabledForegroundColor forState:UIControlStateDisabled];
 }
 
 - (void)setFlatImage:(UIImage *)image
@@ -158,13 +162,13 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
         return;
     }
     
-    [self setImage:[self jsq_image:image maskedWithColor:self.normalForegroundColor]
+    [self setImage:[self jsq_image:image maskedWithColor:_normalForegroundColor]
           forState:UIControlStateNormal];
     
-    [self setImage:[self jsq_image:image maskedWithColor:self.highlightedForegroundColor]
+    [self setImage:[self jsq_image:image maskedWithColor:_highlightedForegroundColor]
           forState:UIControlStateHighlighted];
     
-    [self setImage:[self jsq_image:image maskedWithColor:self.disabledForegroundColor]
+    [self setImage:[self jsq_image:image maskedWithColor:_disabledForegroundColor]
           forState:UIControlStateDisabled];
 }
 
