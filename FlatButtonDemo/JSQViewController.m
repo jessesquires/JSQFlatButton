@@ -1,29 +1,20 @@
 //
-//  JSQViewController.m
-//  FlatButtonDemo
+//  Created by Jesse Squires
+//  http://www.hexedbits.com
 //
-//  Created by Jesse Squires on 12/25/13.
-//  Copyright (c) 2013 Hexed Bits. All rights reserved.
+//
+//  The MIT License
+//  Copyright (c) 2013 Jesse Squires
+//  http://opensource.org/licenses/MIT
 //
 
 #import "JSQViewController.h"
-
-@interface JSQViewController ()
-
-@end
 
 @implementation JSQViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

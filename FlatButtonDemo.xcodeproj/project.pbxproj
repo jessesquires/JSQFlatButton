@@ -22,6 +22,7 @@
 		881EB66D186B3C1A00C6CD98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 881EB66B186B3C1A00C6CD98 /* InfoPlist.strings */; };
 		881EB66F186B3C1A00C6CD98 /* FlatButtonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 881EB66E186B3C1A00C6CD98 /* FlatButtonDemoTests.m */; };
 		88B306F5186B3E9C00BDB1BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B306F4186B3E9C00BDB1BA /* QuartzCore.framework */; };
+		88B306FE186B42FB00BDB1BA /* JSQFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B306F9186B42FB00BDB1BA /* JSQFlatButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		881EB66C186B3C1A00C6CD98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		881EB66E186B3C1A00C6CD98 /* FlatButtonDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatButtonDemoTests.m; sourceTree = "<group>"; };
 		88B306F4186B3E9C00BDB1BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		88B306F8186B42FB00BDB1BA /* JSQFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQFlatButton.h; sourceTree = "<group>"; };
+		88B306F9186B42FB00BDB1BA /* JSQFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQFlatButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		881EB637186B3C1900C6CD98 = {
 			isa = PBXGroup;
 			children = (
+				88B306F6186B42FB00BDB1BA /* JSQFlatButton */,
 				881EB649186B3C1900C6CD98 /* FlatButtonDemo */,
 				881EB668186B3C1A00C6CD98 /* FlatButtonDemoTests */,
 				881EB642186B3C1900C6CD98 /* Frameworks */,
@@ -154,6 +158,23 @@
 				881EB66B186B3C1A00C6CD98 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88B306F6186B42FB00BDB1BA /* JSQFlatButton */ = {
+			isa = PBXGroup;
+			children = (
+				88B306F7186B42FB00BDB1BA /* Classes */,
+			);
+			path = JSQFlatButton;
+			sourceTree = "<group>";
+		};
+		88B306F7186B42FB00BDB1BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				88B306F8186B42FB00BDB1BA /* JSQFlatButton.h */,
+				88B306F9186B42FB00BDB1BA /* JSQFlatButton.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +278,7 @@
 				881EB650186B3C1A00C6CD98 /* main.m in Sources */,
 				881EB654186B3C1A00C6CD98 /* JSQAppDelegate.m in Sources */,
 				881EB65A186B3C1A00C6CD98 /* JSQViewController.m in Sources */,
+				88B306FE186B42FB00BDB1BA /* JSQFlatButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
