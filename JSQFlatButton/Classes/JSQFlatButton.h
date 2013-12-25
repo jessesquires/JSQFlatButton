@@ -16,7 +16,12 @@
 @interface JSQFlatButton : UIButton
 
 /**
- *  The background color of the button in its default state. The default value is `nil`.
+ *  The background color of the button in its default state. The default value is `nil`. 
+ *  
+ *  @warning If the current value of highlightedBackgroundColor is `nil`, then setting this property also sets highlightedBackgroundColor to the same color value with a darkened brightness value. 
+ *
+ *  @warning If the current value of disabledBackgroundColor is `nil`, then setting this property also sets disabledBackgroundColor to the same color value with a darkened brightness value and alpha value of `0.75f`.
+ *
  */
 @property (strong, nonatomic) UIColor *normalBackgroundColor;
 
@@ -32,6 +37,11 @@
 
 /**
  *  The foreground color (the text color and image mask color) of the button in its default state. The default value is `nil`.
+ *
+ *  @warning If the current value of highlightedForegroundColor is `nil`, then setting this property also sets highlightedForegroundColor to the same color value with a lightened brightness value.
+ *
+ *  @warning If the current value of disabledForegroundColor is `nil`, then setting this property also sets disabledForegroundColor to the same color value with a lightened brightness value and alpha value of `0.75f`.
+ *
  */
 @property (strong, nonatomic) UIColor *normalForegroundColor;
 
@@ -47,6 +57,11 @@
 
 /**
  *  The border color of the button in its default state. The default value is `nil`.
+ *
+ *  @warning If the current value of highlightedBorderColor is `nil`, then setting this property also sets highlightedBorderColor to the same color value with a lightened brightness value.
+ *
+ *  @warning If the current value of disabledBorderColor is `nil`, then setting this property also sets disabledBorderColor to the same color value with a lightened brightness value and alpha value of `0.75f`.
+ *
  */
 @property (strong, nonatomic) UIColor *normalBorderColor;
 
