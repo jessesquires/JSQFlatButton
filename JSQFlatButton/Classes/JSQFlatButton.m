@@ -15,31 +15,11 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
 @interface JSQFlatButton ()
 
-- (void)jsq_setup;
-
-- (void)jsq_refreshTitleAndImage;
-
-- (UIColor *)jsq_darkenedColorFromColor:(UIColor *)color;
-- (UIColor *)jsq_lightenedColorFromColor:(UIColor *)color;
-
-- (UIImage *)jsq_image:(UIImage *)image maskedWithColor:(UIColor *)maskColor;
-
 @end
-
-
 
 @implementation JSQFlatButton
 
 #pragma mark - Initialization
-
-- (void)jsq_setup
-{
-    self.showsTouchWhenHighlighted = NO;
-    self.adjustsImageWhenHighlighted = NO;
-    self.adjustsImageWhenDisabled = NO;
-    self.titleLabel.shadowOffset = CGSizeZero;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
               backgroundColor:(UIColor *)backgroundColor
               foregroundColor:(UIColor *)foregroundColor
@@ -66,19 +46,12 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     return self;
 }
 
-- (void)dealloc
+- (void)jsq_setup
 {
-    _normalBackgroundColor = nil;
-    _highlightedBackgroundColor = nil;
-    _disabledBackgroundColor = nil;
-    
-    _normalForegroundColor = nil;
-    _highlightedForegroundColor = nil;
-    _disabledForegroundColor = nil;
-    
-    _normalBorderColor = nil;
-    _highlightedBorderColor = nil;
-    _disabledBorderColor = nil;
+    self.showsTouchWhenHighlighted = NO;
+    self.adjustsImageWhenHighlighted = NO;
+    self.adjustsImageWhenDisabled = NO;
+    self.titleLabel.shadowOffset = CGSizeZero;
 }
 
 #pragma mark - Setters
@@ -88,12 +61,12 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     self.backgroundColor = normalBackgroundColor;
     _normalBackgroundColor = normalBackgroundColor;
     
-    if (!_highlightedBackgroundColor) {
-        _highlightedBackgroundColor = [self jsq_darkenedColorFromColor:normalBackgroundColor];
+    if (!self.highlightedBackgroundColor) {
+        self.highlightedBackgroundColor = [self jsq_darkenedColorFromColor:normalBackgroundColor];
     }
     
-    if (!_disabledBackgroundColor) {
-        _disabledBackgroundColor = [_highlightedBackgroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    if (!self.disabledBackgroundColor) {
+        self.disabledBackgroundColor = [self.highlightedBackgroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
     
     [self jsq_refreshTitleAndImage];
@@ -104,12 +77,12 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     self.tintColor = normalForegroundColor;
     _normalForegroundColor = normalForegroundColor;
     
-    if (!_highlightedForegroundColor) {
-        _highlightedForegroundColor = [self jsq_lightenedColorFromColor:normalForegroundColor];
+    if (!self.highlightedForegroundColor) {
+        self.highlightedForegroundColor = [self jsq_lightenedColorFromColor:normalForegroundColor];
     }
     
-    if (!_disabledForegroundColor) {
-        _disabledForegroundColor = [_highlightedForegroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    if (!self.disabledForegroundColor) {
+        self.disabledForegroundColor = [self.highlightedForegroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
     
     [self jsq_refreshTitleAndImage];
@@ -117,16 +90,18 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
 - (void)setNormalBorderColor:(UIColor *)normalBorderColor
 {
-    self.layer.borderColor = normalBorderColor.CGColor;
     _normalBorderColor = normalBorderColor;
     
-    if (!_highlightedBorderColor) {
-        _highlightedBorderColor = [self jsq_lightenedColorFromColor:normalBorderColor];
+    if (!self.highlightedBorderColor) {
+        self.highlightedBorderColor = [self jsq_lightenedColorFromColor:normalBorderColor];
     }
     
-    if (!_disabledBorderColor) {
-        _disabledBorderColor = [_highlightedBorderColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    if (!self.disabledBorderColor) {
+        self.disabledBorderColor = [self.highlightedBorderColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
+
+    [self refreshHighlightedState];
+    [self refreshEnabledState];
 }
 
 - (void)setHighlightedBackgroundColor:(UIColor *)highlightedBackgroundColor
