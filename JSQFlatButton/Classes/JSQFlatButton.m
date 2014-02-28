@@ -117,7 +117,6 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
 - (void)setNormalBorderColor:(UIColor *)normalBorderColor
 {
-    self.layer.borderColor = normalBorderColor.CGColor;
     _normalBorderColor = normalBorderColor;
     
     if (!_highlightedBorderColor) {
@@ -127,6 +126,8 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     if (!_disabledBorderColor) {
         _disabledBorderColor = [_highlightedBorderColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
+    [self refreshHighlightedState];
+    [self refreshEnabledState];
 }
 
 - (void)setHighlightedBackgroundColor:(UIColor *)highlightedBackgroundColor
