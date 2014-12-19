@@ -13,21 +13,6 @@
 
 static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
-@interface JSQFlatButton ()
-
-- (void)jsq_setup;
-
-- (void)jsq_refreshTitleAndImage;
-
-- (UIColor *)jsq_darkenedColorFromColor:(UIColor *)color;
-- (UIColor *)jsq_lightenedColorFromColor:(UIColor *)color;
-
-- (UIImage *)jsq_image:(UIImage *)image maskedWithColor:(UIColor *)maskColor;
-
-@end
-
-
-
 @implementation JSQFlatButton
 
 #pragma mark - Initialization
@@ -64,21 +49,6 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
         [self jsq_setup];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    _normalBackgroundColor = nil;
-    _highlightedBackgroundColor = nil;
-    _disabledBackgroundColor = nil;
-    
-    _normalForegroundColor = nil;
-    _highlightedForegroundColor = nil;
-    _disabledForegroundColor = nil;
-    
-    _normalBorderColor = nil;
-    _highlightedBorderColor = nil;
-    _disabledBorderColor = nil;
 }
 
 #pragma mark - Setters
@@ -205,9 +175,9 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     
     [self setTitle:title forState:UIControlStateNormal];
     
-    [self setTitleColor:_normalForegroundColor forState:UIControlStateNormal];
-    [self setTitleColor:_highlightedForegroundColor forState:UIControlStateHighlighted];
-    [self setTitleColor:_disabledForegroundColor forState:UIControlStateDisabled];
+    [self setTitleColor:self.normalForegroundColor forState:UIControlStateNormal];
+    [self setTitleColor:self.highlightedForegroundColor forState:UIControlStateHighlighted];
+    [self setTitleColor:self.disabledForegroundColor forState:UIControlStateDisabled];
 }
 
 - (void)setFlatImage:(UIImage *)image
@@ -217,13 +187,13 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
         return;
     }
     
-    [self setImage:[self jsq_image:image maskedWithColor:_normalForegroundColor]
+    [self setImage:[self jsq_image:image maskedWithColor:self.normalForegroundColor]
           forState:UIControlStateNormal];
     
-    [self setImage:[self jsq_image:image maskedWithColor:_highlightedForegroundColor]
+    [self setImage:[self jsq_image:image maskedWithColor:self.highlightedForegroundColor]
           forState:UIControlStateHighlighted];
     
-    [self setImage:[self jsq_image:image maskedWithColor:_disabledForegroundColor]
+    [self setImage:[self jsq_image:image maskedWithColor:self.disabledForegroundColor]
           forState:UIControlStateDisabled];
 }
 
