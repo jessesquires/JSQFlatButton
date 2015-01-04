@@ -23,17 +23,17 @@
  *  @warning If the current value of disabledBackgroundColor is `nil`, then setting this property also sets disabledBackgroundColor to the same color value with a darkened brightness value and alpha value of `0.75f`.
  *
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *normalBackgroundColor;
+@property (strong, nonatomic) IBInspectable UIColor *normalBackgroundColor;
 
 /**
  *  The background color of the button in its highlighted state. The default value is `nil`.
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *highlightedBackgroundColor;
+@property (strong, nonatomic) IBInspectable UIColor *highlightedBackgroundColor;
 
 /**
  *  The background color of the button in its disabled state. The default value is `nil`.
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *disabledBackgroundColor;
+@property (strong, nonatomic) IBInspectable UIColor *disabledBackgroundColor;
 
 /**
  *  The foreground color (the text color and image mask color) of the button in its default state. The default value is `nil`.
@@ -43,17 +43,17 @@
  *  @warning If the current value of disabledForegroundColor is `nil`, then setting this property also sets disabledForegroundColor to the same color value with a lightened brightness value and alpha value of `0.75f`.
  *
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *normalForegroundColor;
+@property (strong, nonatomic) IBInspectable UIColor *normalForegroundColor;
 
 /**
  *  The foreground color (the text color and image mask color) of the button in its highlighted state. The default value is `nil`.
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *highlightedForegroundColor;
+@property (strong, nonatomic) IBInspectable UIColor *highlightedForegroundColor;
 
 /**
  *  The foreground color (the text color and image mask color) of the button in its disabled state. The default value is `nil`.
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *disabledForegroundColor;
+@property (strong, nonatomic) IBInspectable UIColor *disabledForegroundColor;
 
 /**
  *  The border color of the button in its default state. The default value is `nil`.
@@ -63,27 +63,27 @@
  *  @warning If the current value of disabledBorderColor is `nil`, then setting this property also sets disabledBorderColor to the same color value with a lightened brightness value and alpha value of `0.75f`.
  *
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *normalBorderColor;
+@property (strong, nonatomic) IBInspectable UIColor *normalBorderColor;
 
 /**
  *  The border color of the button in its hightlighted state. The default value is `nil`.
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *highlightedBorderColor;
+@property (strong, nonatomic) IBInspectable UIColor *highlightedBorderColor;
 
 /**
  *  The border color of the button in its disabled state. The default value is `nil`.
  */
-@property (strong, nonatomic) IB_DESIGNABLE UIColor *disabledBorderColor;
+@property (strong, nonatomic) IBInspectable UIColor *disabledBorderColor;
 
 /**
  *  The corner radius of the button. The default value is `0.0f`.
  */
-@property (assign, nonatomic) IB_DESIGNABLE CGFloat cornerRadius;
+@property (assign, nonatomic) IBInspectable CGFloat cornerRadius;
 
 /**
  *  The border width of the button. The default value is `0.0f`.
  */
-@property (assign, nonatomic) IB_DESIGNABLE CGFloat borderWidth;
+@property (assign, nonatomic) IBInspectable CGFloat borderWidth;
 
 #pragma mark - Initialization
 
