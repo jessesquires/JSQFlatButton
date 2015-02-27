@@ -1,3 +1,11 @@
+# Attention!
+
+This project is no longer supported or actively developed.
+
+This library *was* useful for iOS 6, but iOS 7 and 8 have pretty much rendered it obsolete.
+
+---------------------------------
+
 # JSQFlatButton 
 [![Build Status](https://secure.travis-ci.org/jessesquires/JSQFlatButton.svg)](http://travis-ci.org/jessesquires/JSQFlatButton) [![Version Status](http://img.shields.io/cocoapods/v/JSQFlatButton.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink]
 
