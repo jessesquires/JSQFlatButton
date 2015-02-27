@@ -1,4 +1,5 @@
-# JSQFlatButton [![Build Status](https://secure.travis-ci.org/jessesquires/JSQFlatButton.png)](http://travis-ci.org/jessesquires/JSQFlatButton) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQFlatButton/badge.png)][docsLink] [![license MIT](http://b.repl.ca/v1/license-MIT-blue.png)][mitLink]
+# JSQFlatButton 
+[![Build Status](https://secure.travis-ci.org/jessesquires/JSQFlatButton.svg)](http://travis-ci.org/jessesquires/JSQFlatButton) [![Version Status](http://img.shields.io/cocoapods/v/JSQFlatButton.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink]
 
 A light-weight, flat design [UIButton](https://developer.apple.com/library/ios/documentation/uikit/reference/UIButton_Class/UIButton/UIButton.html) for iOS.
 
@@ -21,16 +22,14 @@ A light-weight, flat design [UIButton](https://developer.apple.com/library/ios/d
 
 #### From [CocoaPods](http://www.cocoapods.org)
 
-`pod 'JSQFlatButton'`
+````ruby
+pod 'JSQFlatButton'
+````
 
 #### From source
 
 * Drag the `JSQFlatButton/` folder to your project
 * Add the `QuartzCore.framework` to your project
-
-#### Too cool for [ARC](https://developer.apple.com/library/mac/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)?
-
-* Add the `-fobjc-arc` compiler flag to all source files in your project in Target Settings > Build Phases > Compile Sources.
 
 ## Getting Started
 
@@ -38,15 +37,7 @@ See the included demo project: `FlatButtonDemo.xcodeproj`
 
 ## Documentation
 
-Documentation is [available here][docsLink] via [CocoaDocs](http://cocoadocs.org). Thanks [@CocoaDocs](https://twitter.com/CocoaDocs)!
-
-## Donate
-
-Support the developement of this **free**, open-source control! via [Square Cash](https://square.com/cash).
-
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$1&body=Thanks for developing JSQFlatButton!">Send $1</a> <em>Just saying thanks!</em></h4>
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$5&body=Thanks for developing JSQFlatButton!">Send $5</a> <em>This control is great!</em></h4>
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQFlatButton!">Send $10</a> <em>This totally saved me time!</em></h4>
+Documentation is [available here][docsLink] via [CocoaDocs](http://cocoadocs.org).
 
 ## How To Contribute
 
@@ -54,9 +45,7 @@ Please follow these sweet [contribution guidelines](https://github.com/jessesqui
 
 ## Credits
 
-Created by [@jesse_squires](https://twitter.com/jesse_squires), a [programming-motherfucker](http://programming-motherfucker.com).
-
-Many thanks to [the contributors](https://github.com/jessesquires/JSQFlatButton/graphs/contributors) of this project.
+Created by [@jesse_squires](https://twitter.com/jesse_squires).
 
 Demo icons designed by [@darranmorris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). *Go show him some [love](http://store.app-bits.com).*
 
@@ -64,26 +53,18 @@ Demo icons designed by [@darranmorris](https://twitter.com/darranmorris) at [APP
 
 ## Apps Using This Control
 
-[Eight-Twelve](https://itunes.apple.com/us/app/eight-twelve/id648715570?mt=8)
+* [Eight-Twelve](https://itunes.apple.com/us/app/eight-twelve/id648715570)
+* [Showrtpath Browser](https://itunes.apple.com/us/app/showrtpath-browser/id773200599)
+* [Print Here](https://itunes.apple.com/us/app/print-here/id836417891)
 
-[Showrtpath Browser](https://itunes.apple.com/us/app/showrtpath-browser/id773200599?mt=8)
+## License
 
-*[Contact me](mailto:jesse.squires.developer@gmail.com) to have your app listed here.*
+`JSQFlatButton` is released under an [MIT License][mitLink]. See `LICENSE` for details.
 
-## [MIT License][mitLink]
+>**Copyright &copy; 2015 Jesse Squires.**
 
-You are free to use this as you please. **No attribution necessary, but much appreciated.**
+*Please provide attribution, it is greatly appreciated.*
 
-Copyright &copy; 2013 Jesse Squires
-
->Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
->The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
->THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[docsLink]:http://cocoadocs.org/docsets/JSQFlatButton/2.0.0
+[docsLink]:http://cocoadocs.org/docsets/JSQFlatButton
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLink]:https://raw.github.com/jessesquires/JSQFlatButton/master/Screenshots/screenshot.png
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/jsqflatbutton/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
