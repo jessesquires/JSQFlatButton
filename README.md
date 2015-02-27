@@ -41,15 +41,15 @@ Documentation is [available here][docsLink] via [CocoaDocs](http://cocoadocs.org
 
 ## How To Contribute
 
-Please follow these sweet [contribution guidelines](https://github.com/jessesquires/HowToContribute).
+_**This project is no longer supported or actively developed.**_
+
+~~Please follow these sweet [contribution guidelines](https://github.com/jessesquires/HowToContribute).~~
 
 ## Credits
 
-Created by [@jesse_squires](https://twitter.com/jesse_squires).
+Created by [@jesse_squires](https://twitter.com/jesse_squires)
 
-Demo icons designed by [@darranmorris](https://twitter.com/darranmorris) at [APP-BITS](http://app-bits.com). *Go show him some [love](http://store.app-bits.com).*
-
-*See [App-Bits License](https://raw.github.com/jessesquires/JSQFlatButton/master/appbits_license.txt) and [App-Bits README](https://raw.github.com/jessesquires/JSQFlatButton/master/appbits_readme.pdf) for details on icon usage.*
+Demo icons by [@darranmorris](https://twitter.com/darranmorris), free from [APP-BITS](http://app-bits.com)
 
 ## Apps Using This Control
 
@@ -58,6 +58,8 @@ Demo icons designed by [@darranmorris](https://twitter.com/darranmorris) at [APP
 * [Print Here](https://itunes.apple.com/us/app/print-here/id836417891)
 
 ## License
+
+*See [App-Bits License](https://raw.github.com/jessesquires/JSQFlatButton/master/appbits_license.txt) and [App-Bits README](https://raw.github.com/jessesquires/JSQFlatButton/master/appbits_readme.pdf) for details on icon usage.*
 
 `JSQFlatButton` is released under an [MIT License][mitLink]. See `LICENSE` for details.
 
