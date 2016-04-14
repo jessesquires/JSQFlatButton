@@ -1,6 +1,6 @@
-# Attention!
+# :warning: Attention! :warning:
 
-**This project is no longer supported or actively developed.**
+## This project is no longer supported or actively developed.
 
 This library *was* useful for iOS 6, but iOS 7 and 8 have pretty much rendered it obsolete. 
 (*And who's still writing apps for iOS 6?*)
