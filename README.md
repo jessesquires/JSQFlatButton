@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 # :warning: Attention! :warning:
 
 ## This project is no longer supported or actively developed.
