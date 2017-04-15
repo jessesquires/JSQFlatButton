@@ -15,31 +15,11 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
 @interface JSQFlatButton ()
 
-- (void)jsq_setup;
-
-- (void)jsq_refreshTitleAndImage;
-
-- (UIColor *)jsq_darkenedColorFromColor:(UIColor *)color;
-- (UIColor *)jsq_lightenedColorFromColor:(UIColor *)color;
-
-- (UIImage *)jsq_image:(UIImage *)image maskedWithColor:(UIColor *)maskColor;
-
 @end
-
-
 
 @implementation JSQFlatButton
 
 #pragma mark - Initialization
-
-- (void)jsq_setup
-{
-    self.showsTouchWhenHighlighted = NO;
-    self.adjustsImageWhenHighlighted = NO;
-    self.adjustsImageWhenDisabled = NO;
-    self.titleLabel.shadowOffset = CGSizeZero;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
               backgroundColor:(UIColor *)backgroundColor
               foregroundColor:(UIColor *)foregroundColor
@@ -66,19 +46,12 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     return self;
 }
 
-- (void)dealloc
+- (void)jsq_setup
 {
-    _normalBackgroundColor = nil;
-    _highlightedBackgroundColor = nil;
-    _disabledBackgroundColor = nil;
-    
-    _normalForegroundColor = nil;
-    _highlightedForegroundColor = nil;
-    _disabledForegroundColor = nil;
-    
-    _normalBorderColor = nil;
-    _highlightedBorderColor = nil;
-    _disabledBorderColor = nil;
+    self.showsTouchWhenHighlighted = NO;
+    self.adjustsImageWhenHighlighted = NO;
+    self.adjustsImageWhenDisabled = NO;
+    self.titleLabel.shadowOffset = CGSizeZero;
 }
 
 #pragma mark - Setters
@@ -88,12 +61,12 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     self.backgroundColor = normalBackgroundColor;
     _normalBackgroundColor = normalBackgroundColor;
     
-    if (!_highlightedBackgroundColor) {
-        _highlightedBackgroundColor = [self jsq_darkenedColorFromColor:normalBackgroundColor];
+    if (!self.highlightedBackgroundColor) {
+        self.highlightedBackgroundColor = [self jsq_darkenedColorFromColor:normalBackgroundColor];
     }
     
-    if (!_disabledBackgroundColor) {
-        _disabledBackgroundColor = [_highlightedBackgroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    if (!self.disabledBackgroundColor) {
+        self.disabledBackgroundColor = [self.highlightedBackgroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
     
     [self jsq_refreshTitleAndImage];
@@ -104,12 +77,12 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
     self.tintColor = normalForegroundColor;
     _normalForegroundColor = normalForegroundColor;
     
-    if (!_highlightedForegroundColor) {
-        _highlightedForegroundColor = [self jsq_lightenedColorFromColor:normalForegroundColor];
+    if (!self.highlightedForegroundColor) {
+        self.highlightedForegroundColor = [self jsq_lightenedColorFromColor:normalForegroundColor];
     }
     
-    if (!_disabledForegroundColor) {
-        _disabledForegroundColor = [_highlightedForegroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    if (!self.disabledForegroundColor) {
+        self.disabledForegroundColor = [self.highlightedForegroundColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
     }
     
     [self jsq_refreshTitleAndImage];
@@ -117,15 +90,71 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
 
 - (void)setNormalBorderColor:(UIColor *)normalBorderColor
 {
-    self.layer.borderColor = normalBorderColor.CGColor;
     _normalBorderColor = normalBorderColor;
     
-    if (!_highlightedBorderColor) {
-        _highlightedBorderColor = [self jsq_lightenedColorFromColor:normalBorderColor];
+    if (!self.highlightedBorderColor) {
+        self.highlightedBorderColor = [self jsq_lightenedColorFromColor:normalBorderColor];
     }
     
-    if (!_disabledBorderColor) {
-        _disabledBorderColor = [_highlightedBorderColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    if (!self.disabledBorderColor) {
+        self.disabledBorderColor = [self.highlightedBorderColor colorWithAlphaComponent:kJSQColorAlphaDisabled];
+    }
+
+    [self refreshHighlightedState];
+    [self refreshEnabledState];
+}
+
+- (void)setHighlightedBackgroundColor:(UIColor *)highlightedBackgroundColor
+{
+    _highlightedBackgroundColor = highlightedBackgroundColor;
+
+    if (self.highlighted) {
+        [self refreshHighlightedState];
+    }
+}
+
+- (void)setHighlightedForegroundColor:(UIColor *)highlightedForegroundColor
+{
+    _highlightedForegroundColor = highlightedForegroundColor;
+
+    if (self.highlighted) {
+        [self refreshHighlightedState];
+    }
+}
+
+- (void)setHighlightedBorderColor:(UIColor *)highlightedBorderColor
+{
+    _highlightedBorderColor = highlightedBorderColor;
+
+    if (self.highlighted) {
+        [self refreshHighlightedState];
+    }
+}
+
+- (void)setDisabledBackgroundColor:(UIColor *)disabledBackgroundColor
+{
+    _disabledBackgroundColor = disabledBackgroundColor;
+
+    if (!self.enabled) {
+        [self refreshEnabledState];
+    }
+}
+
+- (void)setDisabledForegroundColor:(UIColor *)disabledForegroundColor
+{
+    _disabledForegroundColor = disabledForegroundColor;
+
+    if (!self.enabled) {
+        [self refreshEnabledState];
+    }
+}
+
+- (void)setDisabledBorderColor:(UIColor *)disabledBorderColor
+{
+    _disabledBorderColor = disabledBorderColor;
+
+    if (!self.enabled) {
+        [self refreshEnabledState];
     }
 }
 
@@ -172,24 +201,34 @@ static CGFloat const kJSQColorAlphaDisabled = 0.75f;
           forState:UIControlStateDisabled];
 }
 
+- (void)refreshHighlightedState
+{
+    self.backgroundColor = self.highlighted ? self.highlightedBackgroundColor : self.normalBackgroundColor;
+    self.tintColor = self.highlighted ? self.highlightedForegroundColor : self.normalForegroundColor;
+    self.layer.borderColor = self.highlighted ? self.highlightedBorderColor.CGColor : self.normalBorderColor.CGColor;
+    [self setNeedsDisplay];
+}
+
+- (void)refreshEnabledState
+{
+    self.backgroundColor = self.enabled ? self.normalBackgroundColor : self.disabledBackgroundColor;
+    self.tintColor = self.enabled ? self.normalForegroundColor : self.disabledForegroundColor;
+    self.layer.borderColor = self.enabled ? self.normalBorderColor.CGColor : self.disabledBorderColor.CGColor;
+    [self setNeedsDisplay];
+}
+
 #pragma mark - UIButton
 
 - (void)setHighlighted:(BOOL)highlighted
 {
     [super setHighlighted:highlighted];
-    self.backgroundColor = highlighted ? self.highlightedBackgroundColor : self.normalBackgroundColor;
-    self.tintColor = highlighted ? self.highlightedForegroundColor : self.normalForegroundColor;
-    self.layer.borderColor = highlighted ? self.highlightedBorderColor.CGColor : self.normalBorderColor.CGColor;
-    [self setNeedsDisplay];
+    [self refreshHighlightedState];
 }
 
 - (void)setEnabled:(BOOL)enabled
 {
     [super setEnabled:enabled];
-    self.backgroundColor = enabled ? self.normalBackgroundColor : self.disabledBackgroundColor;
-    self.tintColor = enabled ? self.normalForegroundColor : self.disabledForegroundColor;
-    self.layer.borderColor = enabled ? self.normalBorderColor.CGColor : self.disabledBorderColor.CGColor;
-    [self setNeedsDisplay];
+    [self refreshEnabledState];
 }
 
 #pragma mark - Utilities
